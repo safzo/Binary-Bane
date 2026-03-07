@@ -7,15 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav></nav>
-    <div class="mobile-menu" id="mobileMenu"></div>
+    <nav>
+        <a href="index.html" class="logo">SAFZO<span>.</span></a>
+        <div class="search-container"><input type="text" class="search-bar" placeholder="Search strategy..."></div>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="cases.html">Case Studies</a></li>
+            <li><a href="blog.html" style="color:var(--accent-orange)">Blog</a></li>
+            <li><a href="inquiry.html">Inquiry</a></li>
+        </ul>
+        <div class="mobile-controls"><button class="hamburger" onclick="toggleMenu()">☰</button></div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-menu" onclick="toggleMenu()">&times;</span>
+        <a href="index.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html">Inquiry</a>
+    </div>
 
     <div class="grid">
         <div class="card" onclick="openModal('blog1')">
             <div class="card-body">
-                <small style="color:var(--accent-orange)">STRATEGY</small>
+                <small style="color:var(--accent-orange)">MARCH 2024</small>
                 <h3>Why Bayesian Beats Linear</h3>
-                <p>Click to read full article →</p>
+                <p>Full Article →</p>
             </div>
         </div>
     </div>
@@ -24,7 +37,7 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('blog1')">&times;</span>
             <h2>Why Bayesian Beats Linear Regression</h2>
-            <p>Full scrollable content of your blog post goes here...</p>
+            <p style="margin-top:2rem;">[Long scrollable text about data strategy...]</p>
         </div>
     </div>
 
