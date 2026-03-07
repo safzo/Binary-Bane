@@ -3,31 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies | SAFZO</title>
+    <title>Blog | SAFZO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        </nav>
+    <nav></nav>
 
     <div class="grid">
-        <div class="card" onclick="openModal('case1')">
-            <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=1000&auto=format&fit=crop" class="card-img">
+        <div class="card" onclick="openModal('blog1')">
             <div class="card-body">
-                <h3>Logistics ROI</h3>
-                <p>Click for Technical Teardown →</p>
+                <small style="color:var(--accent-orange)">STRATEGY</small>
+                <h3>Why Bayesian Beats Linear</h3>
+                <p>Click to read full article →</p>
             </div>
         </div>
     </div>
 
-    <div id="case1" class="modal">
+    <div id="blog1" class="modal">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('case1')">&times;</span>
-            <h2>Technical Teardown: Logistics</h2>
-            <hr style="border:0.5px solid var(--accent-orange); margin:1.5rem 0;">
-            <p><strong>Situation:</strong> Detailed explanation of the friction...</p>
-            <p><strong>Result:</strong> $40k monthly overhead reduction.</p>
+            <span class="close-modal" onclick="closeModal('blog1')">&times;</span>
+            <h2>Why Bayesian Beats Linear Regression</h2>
+            <p style="margin-top:1.5rem">Full, scrollable content here...</p>
         </div>
     </div>
 
@@ -35,7 +31,6 @@
         function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
         function openModal(id) { document.getElementById(id).style.display = "block"; }
         function closeModal(id) { document.getElementById(id).style.display = "none"; }
-        window.onclick = function(e) { if(e.target.className === 'modal') e.target.style.display = 'none'; }
     </script>
 </body>
 </html>
