@@ -2,97 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inquiry | SAFZO</title>
-    <link rel="icon" type="image/x-icon" href="your-avatar.png">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* This container prevents the stretched look */
-        .form-wrapper { 
-            padding-top: 140px; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh;
-            padding-bottom: 60px;
-        }
-
-        .form-container { 
-            width: 100%;
-            max-width: 550px; /* Limits the width so it doesn't stretch */
-            background: var(--card-blue); 
-            padding: 3.5rem; 
-            border-radius: 15px; 
-            border-left: 5px solid var(--accent-orange); 
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); /* Makes it look like it's floating */
-            transition: transform 0.3s ease;
-        }
-
-        .form-container:hover {
-            transform: translateY(-5px); /* Subtle hover lift */
-        }
-
-        h2 { margin-bottom: 0.5rem; color: var(--text-beige); }
-        .subtitle { color: var(--accent-orange); font-weight: 600; margin-bottom: 2rem; display: block; }
-
-        input, textarea { 
-            width: 100%; 
-            padding: 1.1rem; 
-            background: var(--bg-black); 
-            border: 1px solid rgba(242, 230, 218, 0.1); 
-            color: white; 
-            margin-bottom: 1.2rem; 
-            border-radius: 6px; 
-            font-family: inherit;
-            transition: border 0.3s;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--accent-orange);
-        }
-
-        .logic-quote {
-            margin-top: 2.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(242, 230, 218, 0.1);
-            font-style: italic;
-            font-size: 0.85rem;
-            color: rgba(242, 230, 218, 0.6);
-        }
-
-        .logic-quote span { color: var(--accent-orange); font-weight: bold; }
+        .form-wrapper { padding: 120px 5%; display: flex; justify-content: center; }
+        .form-container { width: 100%; max-width: 500px; background: var(--card-blue); padding: 2.5rem; border-radius: 12px; border-left: 5px solid var(--accent-orange); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: var(--bg-black); border: 1px solid #333; color: white; border-radius: 6px; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search strategy or results...">
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">About</a></li>
-            <li><a href="cases.html">Case Studies</a></li>
-            <li><a href="blog.html">Blog</a></li> 
-            <li><a href="inquiry.html" style="color:var(--accent-orange)">Inquiry</a></li>
-        </ul>
-    </nav>
-
     <div class="form-wrapper">
         <div class="form-container">
             <h2>Impact Assessment</h2>
-            <span class="subtitle">Quantifying the ROI of optimization.</span>
-            
-            <form id="inquiry-form">
-                <input type="text" placeholder="Company / Industry" required>
-                <input type="number" placeholder="Estimated Annual Loss ($)" required>
-                <textarea rows="4" placeholder="Describe the current operational friction..." required></textarea>
-                <button type="submit" class="cta-btn" style="width: 100%;">Submit for Review</button>
+            <form>
+                <input type="text" placeholder="Company Name">
+                <input type="number" placeholder="Annual Loss ($)">
+                <textarea rows="5" placeholder="Problem Description..."></textarea>
+                <button class="cta-btn">Submit for Review</button>
             </form>
-            
-            <div class="logic-quote">
-                "Since this issue is costing you $200k, my fee to build a predictive model isn't an 'expense'—it’s an <span>investment that pays for itself in 40 days.</span>"
-            </div>
         </div>
     </div>
+
+    <script>
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
+    </script>
 </body>
 </html>
