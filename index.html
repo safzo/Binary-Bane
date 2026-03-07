@@ -2,48 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safwan Hasan | Strategy</title>
-    <link rel="icon" type="image/x-icon" href="your-avatar.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo"><img src="your-avatar.png" style="width:24px; margin-right:8px;"> SAFZO<span>.</span></a>
-        <div class="search-container"><input type="text" class="search-bar" placeholder="Search architecture..."></div>
+        <a href="index.html" class="logo">SAFZO<span>.</span></a>
+        
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search architecture...">
+        </div>
+
         <ul class="nav-links">
             <li><a href="index.html" style="color:var(--accent-orange)">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
+
+        <div class="mobile-controls">
+            <button class="mobile-search-btn" onclick="toggleSearch()">🔍</button>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </div>
     </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-menu" onclick="toggleMenu()">&times;</span>
+        <a href="index.html">About</a>
+        <a href="cases.html">Case Studies</a>
+        <a href="blog.html">Blog</a>
+        <a href="inquiry.html">Inquiry</a>
+    </div>
 
     <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');">
         <div class="content-box">
             <h1>Who Am I?</h1>
-            <p>I am a Data Strategy Partner. I build the predictive systems that Big Tech and scale-ups use to eliminate bottlenecks and protect margins.</p>
+            <p>Data Strategy Partner. I build predictive systems for Big Tech.</p>
         </div>
     </section>
 
     <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop');">
         <div class="content-box">
             <h1>Perspective</h1>
-            <p>I believe in high-impact expertise delivered in silence. Efficiency isn't just a metric; it's a way to reclaim time and freedom.</p>
-        </div>
-    </section>
-
-    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop');">
-        <div class="content-box">
-            <h1>USA Foundation</h1>
-            <p>Texas Tech refined my analytical rigor. I combined US tech speed with the grit of South Asian market logistics.</p>
+            <p>High-impact expertise delivered in silence.</p>
         </div>
     </section>
 
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
-        }, { threshold: 0.5 });
-        document.querySelectorAll('.content-box').forEach(box => observer.observe(box));
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
+        function toggleSearch() { alert("Search activated"); }
     </script>
 </body>
 </html>
