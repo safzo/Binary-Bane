@@ -2,42 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Studies | SAFZO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        <div class="search-container"><input type="text" class="search-bar" placeholder="Search results..."></div>
-        <ul class="nav-links">
-            <li><a href="index.html">About</a></li>
-            <li><a href="cases.html" style="color:var(--accent-orange)">Case Studies</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="inquiry.html">Inquiry</a></li>
-        </ul>
-    </nav>
-
     <div class="grid">
-        <div class="card" onclick="openModal('case1')">
-            <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=1000&auto=format&fit=crop" class="card-img">
-            <div class="card-body"><h3>Logistics ROI</h3><p>Click for technical teardown →</p></div>
+        <div class="card" onclick="alert('Open Case Modal')">
+            <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=1000&auto=format&fit=crop" style="width:100%">
+            <div class="card-body">
+                <h3>Logistics ROI</h3>
+                <p>Click for technical teardown →</p>
+            </div>
         </div>
     </div>
-
-    <div id="case1" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('case1')">&times;</span>
-            <h2>Logistics ROI Teardown</h2>
-            <hr style="border: 0.5px solid var(--accent-orange); margin: 1rem 0;">
-            <p><strong>Situation:</strong> Detailed explanation of the $200k loss...</p>
-            <p><strong>Action:</strong> Bayesian Modeling...</p>
-            <p><strong>Result:</strong> $40k saved in 3 months.</p>
-        </div>
-    </div>
-
+    
     <script>
-        function openModal(id) { document.getElementById(id).style.display = "block"; }
-        function closeModal(id) { document.getElementById(id).style.display = "none"; }
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
     </script>
 </body>
 </html>
