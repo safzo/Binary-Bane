@@ -3,101 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Inquiry | SAFZO</title>
-    <link rel="icon" type="image/x-icon" href="your-avatar.png">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* This wrapper ensures the content starts below the fixed nav */
-        .form-container-wrapper { 
-            padding-top: 120px; /* Adjust this value if your header is taller */
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh;
-            padding-bottom: 50px;
-        }
-
-        .form-container { 
-            max-width: 600px; 
-            background: var(--card-blue); 
-            padding: 3rem; 
-            border-radius: 12px; 
-            border-left: 4px solid var(--accent-orange); 
-        }
-
-        input, textarea, select { 
-            width: 100%; 
-            padding: 1rem; 
-            background: var(--bg-black); 
-            border: 1px solid rgba(242, 230, 218, 0.1); 
-            color: white; 
-            margin-bottom: 1.5rem; 
-            border-radius: 4px; 
-            font-family: inherit;
-        }
-
-        input:focus, textarea:focus {
-            outline: 1px solid var(--accent-orange);
-        }
-
-        #success-msg {
-            display: none;
-            color: #4BB543;
-            font-weight: bold;
-            text-align: center;
-            padding: 1rem;
-            border: 1px dashed #4BB543;
-            margin-bottom: 1rem;
-        }
-    </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">
-            <img src="your-avatar.png" class="logo-icon" alt=""> SAFZO<span>.</span>
-        </a>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search strategy or results...">
-        </div>
+        <a href="index.html" class="logo">SAFZO<span>.</span></a>
+        <div class="search-container"><input type="text" class="search-bar" placeholder="Search assessment..."></div>
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
-            <li><a href="blog.html">Blog</a></li> 
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html" style="color:var(--accent-orange)">Inquiry</a></li>
         </ul>
     </nav>
 
-    <div class="form-container-wrapper">
-        <div class="form-container reveal active">
+    <div class="form-wrapper">
+        <div class="form-container">
             <h2>Impact Assessment</h2>
-            <p style="margin-bottom:2rem">Describe the bottleneck you are facing and its financial weight.</p>
-            
-            <div id="success-msg">Assessment Sent. I will review the financial logic and contact you shortly.</div>
-
-            <form id="inquiry-form">
-                <input type="text" placeholder="Company Name" required>
-                <input type="number" placeholder="Estimated annual $ value of this problem?" required>
-                <textarea rows="5" placeholder="Describe the current operational friction..." required></textarea>
+            <p style="margin-bottom:1.5rem">Determine the ROI of a data-driven solution.</p>
+            <form id="contact-form">
+                <input type="text" placeholder="Company Name" style="width:100%; padding:1rem; margin-bottom:1rem; background:#16181d; color:white; border:1px solid #333;">
+                <input type="number" placeholder="Estimated Annual Loss ($)" style="width:100%; padding:1rem; margin-bottom:1rem; background:#16181d; color:white; border:1px solid #333;">
+                <textarea placeholder="Describe the friction..." style="width:100%; padding:1rem; margin-bottom:1rem; background:#16181d; color:white; border:1px solid #333;" rows="5"></textarea>
                 <button type="submit" class="cta-btn">Submit for Review</button>
             </form>
-            
-            <p style="margin-top:2rem; font-style:italic; font-size:0.9rem; color:var(--accent-orange)">
-                "If an issue costs you $200k/year, a $20k model isn't an expense—it's a 900% ROI."
-            </p>
+            <p style="margin-top:2rem; font-style:italic; font-size:0.9rem; color:var(--accent-orange)">"If an issue costs you $200k/year, a $20k model is a 900% ROI."</p>
         </div>
     </div>
-
-    <script>
-        // Form Submission Logic
-        document.getElementById('inquiry-form').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevents page reload
-            
-            // Hide the form and show the success message
-            this.style.display = 'none';
-            document.getElementById('success-msg').style.display = 'block';
-            
-            // In a real scenario, you'd integrate Formspree here.
-            console.log("Form submitted successfully.");
-        });
-    </script>
 </body>
 </html>
