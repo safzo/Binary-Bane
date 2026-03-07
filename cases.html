@@ -15,30 +15,64 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
-            <li><a href="cases.html">Case Studies</a></li>
-            <li><a href="blog.html">Blog</a></li> <li><a href="inquiry.html">Inquiry</a></li>
+            <li><a href="cases.html" style="color:var(--accent-orange)">Case Studies</a></li>
+            <li><a href="blog.html">Blog</a></li> 
+            <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
     </nav>
 
     <div class="grid">
-        <div class="card">
+        <div class="card" onclick="openModal('case1')">
             <img src="https://images.unsplash.com/photo-1551288049-bbdac8626ad1?auto=format&fit=crop&w=800&q=80" class="card-img" alt="">
             <div class="card-body">
                 <h3>Supply Chain ROI</h3>
-                <p><strong>Situation:</strong> $150k annual loss in overstock.</p>
-                <p><strong>Action:</strong> Bayesian Inventory Model.</p>
-                <p><strong>Result:</strong> 20% reduction in waste.</p>
+                <p>Click to view full technical teardown...</p>
             </div>
         </div>
-        <div class="card">
+
+        <div class="card" onclick="openModal('case2')">
             <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=800&q=80" class="card-img" alt="">
             <div class="card-body">
                 <h3>Financial Risk Model</h3>
-                <p><strong>Situation:</strong> High volatility in debt interest.</p>
-                <p><strong>Action:</strong> Monte Carlo Simulations.</p>
-                <p><strong>Result:</strong> Predicted 95% of outliers.</p>
+                <p>Click to view full technical teardown...</p>
             </div>
         </div>
     </div>
+
+    <div id="case1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('case1')">&times;</span>
+            <h2>Technical Teardown: Supply Chain ROI</h2>
+            <hr style="border: 0.5px solid var(--accent-orange); margin: 1rem 0;">
+            <p><strong>Situation:</strong> $150k annual loss in overstocking due to naive moving-average forecasting.</p>
+            <p><strong>Task:</strong> Build a system that accounts for lead-time volatility.</p>
+            <p><strong>Action:</strong> Implemented a Bayesian Inventory Model using PyMC3 to simulate demand distributions.</p>
+            <p><strong>Result:</strong> 20% reduction in capital lock-up within 4 months.</p>
+        </div>
+    </div>
+
+    <div id="case2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('case2')">&times;</span>
+            <h2>Technical Teardown: Financial Risk</h2>
+            <hr style="border: 0.5px solid var(--accent-orange); margin: 1rem 0;">
+            <p><strong>Situation:</strong> High volatility in debt interest payments affecting cash flow predictability.</p>
+            <p><strong>Task:</strong> Quantify the 'Value at Risk' (VaR) for the portfolio.</p>
+            <p><strong>Action:</strong> Built Monte Carlo simulations to stress-test 10,000 market scenarios.</p>
+            <p><strong>Result:</strong> Predicted 95% of outliers, allowing for a strategic hedge that saved $40k.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "block"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; }
+        
+        // Close modal if user clicks outside the box
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
