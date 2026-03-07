@@ -2,27 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | SAFZO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        <div class="search-container"><input type="text" class="search-bar" placeholder="Search strategy..."></div>
-        <ul class="nav-links">
-            <li><a href="index.html">About</a></li>
-            <li><a href="cases.html">Case Studies</a></li>
-            <li><a href="blog.html" style="color:var(--accent-orange)">Blog</a></li>
-            <li><a href="inquiry.html">Inquiry</a></li>
-        </ul>
-    </nav>
+    <nav></nav>
+    <div class="mobile-menu" id="mobileMenu"></div>
 
     <div class="grid">
         <div class="card" onclick="openModal('blog1')">
             <div class="card-body">
                 <small style="color:var(--accent-orange)">STRATEGY</small>
-                <h3>Why Bayesian Models Beat Linear Regression</h3>
-                <p>Read the full analysis →</p>
+                <h3>Why Bayesian Beats Linear</h3>
+                <p>Click to read full article →</p>
             </div>
         </div>
     </div>
@@ -30,12 +23,13 @@
     <div id="blog1" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('blog1')">&times;</span>
-            <h2>Why Bayesian Models Beat Linear Regression</h2>
-            <p>Full content goes here...</p>
+            <h2>Why Bayesian Beats Linear Regression</h2>
+            <p>Full scrollable content of your blog post goes here...</p>
         </div>
     </div>
 
     <script>
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
         function openModal(id) { document.getElementById(id).style.display = "block"; }
         function closeModal(id) { document.getElementById(id).style.display = "none"; }
     </script>
