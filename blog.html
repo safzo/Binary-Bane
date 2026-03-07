@@ -2,41 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Signal | SAFZO</title>
+    <title>Blog | SAFZO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">
-            <img src="your-avatar.png" class="logo-icon" alt=""> SAFZO<span>.</span>
-        </a>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search strategy or results...">
-        </div>
+        <a href="index.html" class="logo">SAFZO<span>.</span></a>
+        <div class="search-container"><input type="text" class="search-bar" placeholder="Search strategy..."></div>
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
-            <li><a href="blog.html">Blog</a></li> <li><a href="inquiry.html">Inquiry</a></li>
+            <li><a href="blog.html" style="color:var(--accent-orange)">Blog</a></li>
+            <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
     </nav>
 
     <div class="grid">
-        <div class="card">
+        <div class="card" onclick="openModal('blog1')">
             <div class="card-body">
-                <span style="color:var(--accent-orange)">STRATEGY</span>
-                <h2>Why Bayesian Beats Frequentist</h2>
-                <p>Short snippet of the blog post...</p>
-                <button class="cta-btn" onclick="openModal('blog1')" style="margin-top:1rem; background:none; border:1px solid var(--accent-orange); color:var(--accent-orange);">Read Full Blog →</button>
-            </div>
-        </div>
-
-        <div id="blog1" class="modal">
-            <div class="modal-content">
-                <span class="close-modal" onclick="closeModal('blog1')">&times;</span>
-                <h2>Why Bayesian Beats Frequentist in Volatile Politics</h2>
-                <p style="margin-top:1rem;">[Your full, long-form scrollable essay here...]</p>
+                <small style="color:var(--accent-orange)">STRATEGY</small>
+                <h3>Why Bayesian Models Beat Linear Regression</h3>
+                <p>Read the full analysis →</p>
             </div>
         </div>
     </div>
+
+    <div id="blog1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('blog1')">&times;</span>
+            <h2>Why Bayesian Models Beat Linear Regression</h2>
+            <p>Full content goes here...</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "block"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; }
+    </script>
 </body>
 </html>
