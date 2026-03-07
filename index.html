@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safwan Hasan | Advanced Data Strategy</title>
+    <style>
+        /* Your Custom Color Palette */
+        :root {
+            --bg-black: #16181d;
+            --card-blue: #1f2833;
+            --accent-orange: #f05d23;
+            --text-beige: #f2e6da;
+        }
+
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-beige);
+            line-height: 1.6;
+        }
+
+        /* Responsive Flexbox Navigation */
+        header {
+            background-color: var(--card-blue);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-orange);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-beige);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-orange);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-beige);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-orange);
+        }
+
+        /* Hero Section (Home) */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 80vh;
+            padding: 0 10%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem); /* Auto-adjusts size */
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: rgba(242, 230, 218, 0.8); /* Slightly dimmed beige */
+        }
+
+        /* The CTA Button */
+        .cta-btn {
+            background-color: var(--accent-orange);
+            color: var(--bg-black);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            background-color: #d94e1a;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.5rem 5%;
+            }
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero {
+                align-items: center;
+                text-align: center;
+                padding: 0 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Safwan<span>Hasan</span></a>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#inquiry">Inquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="about">
+        <h1>Architecting Data Systems for Scale & Security.</h1>
+        <p>I build advanced predictive models and optimization architectures that allow enterprise organizations to reduce operational bottlenecks and scale seamlessly.</p>
+        <a href="#inquiry" class="cta-btn">Request a Consultation</a>
+    </section>
+
+</body>
+</html>
