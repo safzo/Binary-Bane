@@ -2,45 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Safwan Hasan | Home</title>
+    <title>Safwan Hasan | Strategy</title>
     <link rel="icon" type="image/x-icon" href="your-avatar.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">
-            <img src="your-avatar.png" class="logo-icon" alt=""> SAFZO<span>.</span>
-        </a>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search strategy or results...">
-        </div>
+        <a href="index.html" class="logo"><img src="your-avatar.png" style="width:24px; margin-right:8px;"> SAFZO<span>.</span></a>
+        <div class="search-container"><input type="text" class="search-bar" placeholder="Search architecture..."></div>
         <ul class="nav-links">
-            <li><a href="index.html">About</a></li>
+            <li><a href="index.html" style="color:var(--accent-orange)">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
-            <li><a href="blog.html">Blog</a></li> 
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
     </nav>
 
-    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');">
+    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');">
         <div class="content-box">
             <h1>Who Am I?</h1>
-            <p>I am a Data Strategy Consultant specializing in predictive modeling and operational optimization. I bridge the gap between heavy math and business profitability.</p>
+            <p>I am a Data Strategy Partner. I build the predictive systems that Big Tech and scale-ups use to eliminate bottlenecks and protect margins.</p>
         </div>
     </section>
 
-    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');">
+    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop');">
         <div class="content-box">
             <h1>Perspective</h1>
-            <p>I believe in the "Ghost" lifestyle: high-impact expertise delivered in silence. Efficiency isn't just a metric; it's a way to reclaim time and freedom.</p>
+            <p>I believe in high-impact expertise delivered in silence. Efficiency isn't just a metric; it's a way to reclaim time and freedom.</p>
         </div>
     </section>
 
-    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=80');">
+    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop');">
         <div class="content-box">
-            <h1>The USA Foundation</h1>
-            <p>My time at Texas Tech refined my analytical rigor. I combined the speed of US tech culture with the grit of South Asian market logistics.</p>
+            <h1>USA Foundation</h1>
+            <p>Texas Tech refined my analytical rigor. I combined US tech speed with the grit of South Asian market logistics.</p>
         </div>
     </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.content-box').forEach(box => observer.observe(box));
+    </script>
 </body>
 </html>
