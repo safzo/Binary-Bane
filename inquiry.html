@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inquiry | SAFZO</title>
+    <link rel="icon" type="image/x-icon" href="your-avatar.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-container { max-width: 600px; background: var(--card-blue); padding: 3rem; border-radius: 12px; border-left: 4px solid var(--accent-orange); }
+        input, textarea, select { width: 100%; padding: 1rem; background: var(--bg-black); border: 1px solid rgba(242, 230, 218, 0.1); color: white; margin-bottom: 1.5rem; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <nav></nav>
+
+    <section style="display:flex; justify-content:center; align-items:center;">
+        <div class="form-container reveal active">
+            <h2>Impact Assessment</h2>
+            <p style="margin-bottom:2rem">Describe the bottleneck you are facing and its financial weight.</p>
+            <form>
+                <input type="text" placeholder="Company Name">
+                <input type="number" placeholder="What is the estimated annual $ value of this problem?">
+                <textarea rows="5" placeholder="Describe the current operational friction..."></textarea>
+                <button class="cta-btn">Submit for Review</button>
+            </form>
+            <p style="margin-top:2rem; font-style:italic; font-size:0.9rem; color:var(--accent-orange)">
+                "If an issue costs you $200k/year, a $20k model isn't an expense—it's a 900% ROI."
+            </p>
+        </div>
+    </section>
+</body>
+</html>
