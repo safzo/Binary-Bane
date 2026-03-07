@@ -6,26 +6,121 @@
     <title>Inquiry | SAFZO</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .form-wrapper { padding: 120px 5%; display: flex; justify-content: center; }
-        .form-container { width: 100%; max-width: 500px; background: var(--card-blue); padding: 2.5rem; border-radius: 12px; border-left: 5px solid var(--accent-orange); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-        input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: var(--bg-black); border: 1px solid #333; color: white; border-radius: 6px; }
+        /* Specific styling for the Inquiry hover box */
+        .form-wrapper { 
+            padding-top: 140px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh;
+            padding-bottom: 60px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .form-container { 
+            width: 100%;
+            max-width: 550px; 
+            background: var(--card-blue); 
+            padding: 3.5rem; 
+            border-radius: 15px; 
+            border-left: 6px solid var(--accent-orange); 
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); 
+            transition: transform 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .form-container { padding: 2rem; }
+        }
+
+        .form-container:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 { margin-bottom: 0.5rem; color: var(--text-beige); }
+        .subtitle { color: var(--accent-orange); font-weight: 600; margin-bottom: 2rem; display: block; font-size: 0.9rem; text-transform: uppercase; }
+
+        input, textarea { 
+            width: 100%; 
+            padding: 1.1rem; 
+            background: var(--bg-black); 
+            border: 1px solid rgba(242, 230, 218, 0.1); 
+            color: white; 
+            margin-bottom: 1.2rem; 
+            border-radius: 6px; 
+            font-family: inherit;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+        }
+
+        .logic-quote {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(242, 230, 218, 0.1);
+            font-style: italic;
+            font-size: 0.85rem;
+            color: rgba(242, 230, 218, 0.6);
+        }
+
+        .logic-quote span { color: var(--accent-orange); font-weight: bold; }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html" class="logo">SAFZO<span>.</span></a>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search strategy...">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="cases.html">Case Studies</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="inquiry.html" style="color:var(--accent-orange)">Inquiry</a></li>
+        </ul>
+        <div class="mobile-controls">
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-menu" onclick="toggleMenu()">&times;</span>
+        <a href="index.html" onclick="toggleMenu()">About</a>
+        <a href="cases.html" onclick="toggleMenu()">Case Studies</a>
+        <a href="blog.html" onclick="toggleMenu()">Blog</a>
+        <a href="inquiry.html" onclick="toggleMenu()">Inquiry</a>
+    </div>
+
     <div class="form-wrapper">
         <div class="form-container">
             <h2>Impact Assessment</h2>
-            <form>
-                <input type="text" placeholder="Company Name">
-                <input type="number" placeholder="Annual Loss ($)">
-                <textarea rows="5" placeholder="Problem Description..."></textarea>
-                <button class="cta-btn">Submit for Review</button>
+            <span class="subtitle">Quantifying the ROI of optimization.</span>
+            
+            <form id="inquiry-form">
+                <input type="text" placeholder="Company / Industry" required>
+                <input type="number" placeholder="Estimated Annual Loss ($)" required>
+                <textarea rows="4" placeholder="Describe the current operational friction..." required></textarea>
+                <button type="submit" class="cta-btn" style="width: 100%; border:none; border-radius: 4px; padding:1rem; background:var(--accent-orange); color:white; font-weight:bold; cursor:pointer;">Submit for Review</button>
             </form>
+            
+            <div class="logic-quote">
+                "Since this issue is costing you $200k, my fee to build a predictive model isn't an 'expense'—it’s an <span>investment that pays for itself in 40 days.</span>"
+            </div>
         </div>
     </div>
 
     <script>
-        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
+        function toggleMenu() { 
+            document.getElementById('mobileMenu').classList.toggle('active'); 
+        }
+
+        // Optional: Simple submission handler
+        document.getElementById('inquiry-form').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Assessment received. Analyzing the logic now.');
+        }
     </script>
 </body>
 </html>
