@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Safwan Hasan | Strategic Data Consultant</title>
+    <title>Safwan Hasan | Home</title>
     <link rel="icon" type="image/x-icon" href="your-avatar.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">
-            <img src="your-avatar.png" class="logo-icon" alt=""> SAFZO<span>.</span>
-        </a>
+        <a href="index.html" class="logo">SAFZO<span>.</span></a>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search insights or cases...">
+        </div>
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
@@ -19,25 +20,25 @@
         </ul>
     </nav>
 
-    <section class="parallax" id="hero">
-        <div class="reveal" id="content">
-            <img src="your-avatar.png" alt="Avatar" style="width:100px; border-radius:50%; margin-bottom:2rem; border:2px solid var(--accent-orange);">
-            <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem;">The Architecture <br>of Efficiency.</h1>
-            <p style="max-width: 600px; font-size: 1.2rem; margin-bottom: 2rem; color: rgba(242, 230, 218, 0.7);">
-                I am a Data Strategy Partner. I build the predictive systems that Big Tech and scale-ups use to eliminate bottlenecks and protect margins.
-            </p>
-            <a href="inquiry.html" class="cta-btn">Request an Impact Assessment</a>
+    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');">
+        <div class="content-box">
+            <h1>Who Am I?</h1>
+            <p>I am a Data Strategy Consultant specializing in predictive modeling and operational optimization. I bridge the gap between heavy math and business profitability.</p>
         </div>
     </section>
 
-    <script>
-        window.addEventListener('scroll', () => {
-            const reveals = document.querySelectorAll('.reveal');
-            reveals.forEach(el => {
-                if(el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add('active');
-            });
-        });
-        window.dispatchEvent(new Event('scroll'));
-    </script>
+    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');">
+        <div class="content-box">
+            <h1>Perspective</h1>
+            <p>I believe in the "Ghost" lifestyle: high-impact expertise delivered in silence. Efficiency isn't just a metric; it's a way to reclaim time and freedom.</p>
+        </div>
+    </section>
+
+    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=80');">
+        <div class="content-box">
+            <h1>The USA Foundation</h1>
+            <p>My time at Texas Tech refined my analytical rigor. I combined the speed of US tech culture with the grit of South Asian market logistics.</p>
+        </div>
+    </section>
 </body>
 </html>
