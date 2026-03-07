@@ -123,7 +123,7 @@
         function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
 
         // Paste your LATEST Web App URL here
-        const scriptURL = 'YOUR_NEW_WEB_APP_URL_HERE'; 
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz325wlujMJ6sd30asumC_whIaiH8L6tPXLgtiWt8DwNHrjbT-5bpa5tQrE337fUb6yOA/exec'; 
         const form = document.getElementById('inquiry-form');
         const btn = document.getElementById('submitBtn');
 
@@ -143,7 +143,7 @@
                 mode: 'no-cors' // Allows sending to Google without CORS errors
             })
             .then(() => {
-                alert("Assessment recorded in Google Sheets.");
+                alert("Assessment recorded, I'll reach out to you soon.");
                 form.reset();
                 btn.innerHTML = "Submit for Review";
                 btn.disabled = false;
