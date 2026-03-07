@@ -3,154 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safwan Hasan | Advanced Data Strategy</title>
+    <title>Safwan Hasan | Strategic Data Consultant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* Your Custom Color Palette */
         :root {
             --bg-black: #16181d;
             --card-blue: #1f2833;
             --accent-orange: #f05d23;
             --text-beige: #f2e6da;
+            --glass: rgba(31, 40, 51, 0.7);
         }
 
-        /* Base Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--bg-black);
             color: var(--text-beige);
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        /* Responsive Flexbox Navigation */
-        header {
-            background-color: var(--card-blue);
-            padding: 1rem 5%;
+        /* --- Animations --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px) rotateX(-15deg);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--accent-orange);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: rgba(22, 24, 29, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(242, 230, 218, 0.1);
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--text-beige);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: var(--text-beige); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-orange); }
 
-        .logo span {
-            color: var(--accent-orange);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: var(--text-beige);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--accent-orange);
-        }
-
-        /* Hero Section (Home) */
-        .hero {
+        /* --- Parallax & Sections --- */
+        section {
+            padding: 100px 10%;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
-            min-height: 80vh;
-            padding: 0 10%;
-            max-width: 1200px;
-            margin: auto;
+            position: relative;
         }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem); /* Auto-adjusts size */
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: linear-gradient(rgba(22, 24, 29, 0.9), rgba(22, 24, 29, 0.9)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
+        /* --- Hero --- */
+        .hero-content { max-width: 800px; }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-orange);
             margin-bottom: 2rem;
-            color: rgba(242, 230, 218, 0.8); /* Slightly dimmed beige */
+            filter: grayscale(100%) contrast(120%);
         }
 
-        /* The CTA Button */
-        .cta-btn {
-            background-color: var(--accent-orange);
-            color: var(--bg-black);
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            font-weight: bold;
+        h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1.5rem; line-height: 1.1; }
+        h2 { font-size: 2.5rem; color: var(--accent-orange); margin-bottom: 2rem; }
+
+        /* --- Hover Boxes (Case Studies/Blog) --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: var(--card-blue);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(242, 230, 218, 0.05);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-orange);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .star-label { color: var(--accent-orange); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; display: block; margin-top: 1rem; }
+
+        /* --- Inquiry Section --- */
+        .inquiry-box {
+            background: var(--glass);
+            padding: 3rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--accent-orange);
+            max-width: 700px;
+        }
+
+        .logic-quote {
+            font-style: italic;
+            color: var(--accent-orange);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(242, 230, 218, 0.1);
+        }
+
+        /* Form styling */
+        input, textarea {
+            width: 100%;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid var(--card-blue);
+            padding: 1rem;
+            color: white;
+            margin-bottom: 1rem;
             border-radius: 4px;
-            font-size: 1.1rem;
-            transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            background-color: #d94e1a;
+        .btn {
+            background: var(--accent-orange);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
         }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1.5rem 5%;
-            }
-            nav ul {
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .hero {
-                align-items: center;
-                text-align: center;
-                padding: 0 5%;
-            }
-        }
+        .btn:hover { filter: brightness(1.2); }
+
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">Safwan<span>Hasan</span></a>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#inquiry">Inquiry</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <a href="#" class="logo">SAFZO<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#cases">Case Studies</a></li>
+            <li><a href="#blog">Signal</a></li>
+            <li><a href="#inquiry">Inquiry</a></li>
+        </ul>
+    </nav>
 
-    <section class="hero" id="about">
-        <h1>Architecting Data Systems for Scale & Security.</h1>
-        <p>I build advanced predictive models and optimization architectures that allow enterprise organizations to reduce operational bottlenecks and scale seamlessly.</p>
-        <a href="#inquiry" class="cta-btn">Request a Consultation</a>
+    <section id="about">
+        <div class="hero-content reveal">
+            <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=Safwan&backgroundColor=1f2833" alt="Avatar" class="avatar">
+            <h1>Predictive Analytics & <br>System Optimization.</h1>
+            <p>I build high-stakes data models for Big Tech and E-commerce scale-ups. No buzzwords. Just ROI-driven architecture.</p>
+        </div>
     </section>
 
+    <section id="cases" class="parallax-bg">
+        <h2 class="reveal">Proven Impact</h2>
+        <div class="grid">
+            <div class="card reveal">
+                <h3>Logistics Cost Reduction</h3>
+                <span class="star-label">Situation</span>
+                <p>Company losing $45k/month on inefficient server allocation.</p>
+                <span class="star-label">Action</span>
+                <p>Built a Linear Programming model with sensitivity analysis.</p>
+                <span class="star-label">Result</span>
+                <p>32% reduction in operational waste within 5 months.</p>
+            </div>
+            <div class="card reveal">
+                <h3>Reverse Logistics Optimization</h3>
+                <span class="star-label">Situation</span>
+                <p>US-based auto parts firm facing 18% return rates.</p>
+                <span class="star-label">Action</span>
+                <p>Cleaned fitment data and built a predictive return-likelihood model.</p>
+                <span class="star-label">Result</span>
+                <p>Estimated $150k annual savings in shipping costs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2 class="reveal">The Signal</h2>
+        <div class="grid">
+            <div class="card reveal">
+                <small>March 2024</small>
+                <h3>Why Bayesian models beat Linear Regression in volatile markets.</h3>
+                <p>In high-variance environments like South Asian textiles, frequentist stats fail. Here is how I model debt risk using Bayesian priors...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="inquiry" class="parallax-bg">
+        <div class="inquiry-box reveal">
+            <h2>The Impact Assessment</h2>
+            <p>What is the dollar value of the problem you are trying to solve?</p>
+            <form>
+                <input type="text" placeholder="Your Industry (e.g., E-commerce, Finance)">
+                <textarea placeholder="Describe the bottleneck..."></textarea>
+                <input type="text" placeholder="Estimated annual loss due to this problem ($)">
+                <button class="btn" type="button">Submit Assessment</button>
+            </form>
+            <p class="logic-quote">
+                "If an issue costs you $200k/year, a $20k model that solves it isn't an expense—it’s a 900% return on investment."
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Entrance Animation Logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
