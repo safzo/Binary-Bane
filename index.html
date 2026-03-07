@@ -9,20 +9,15 @@
 <body>
     <nav>
         <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search architecture...">
-        </div>
-
+        <div class="search-container"><input type="text" class="search-bar" placeholder="Search architecture..."></div>
         <ul class="nav-links">
             <li><a href="index.html" style="color:var(--accent-orange)">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
-
         <div class="mobile-controls">
-            <button class="mobile-search-btn" onclick="toggleSearch()">🔍</button>
+            <button class="mobile-search-btn">🔍</button>
             <button class="hamburger" onclick="toggleMenu()">☰</button>
         </div>
     </nav>
@@ -36,22 +31,28 @@
     </div>
 
     <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');">
-        <div class="content-box">
+        <div class="content-box active">
             <h1>Who Am I?</h1>
-            <p>Data Strategy Partner. I build predictive systems for Big Tech.</p>
+            <p>I am a Data Strategy Partner. I build the predictive systems that Big Tech and scale-ups use to eliminate bottlenecks.</p>
         </div>
     </section>
 
     <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop');">
-        <div class="content-box">
+        <div class="content-box active">
             <h1>Perspective</h1>
-            <p>High-impact expertise delivered in silence.</p>
+            <p>I believe in high-impact expertise delivered in silence. Efficiency isn't just a metric; it's a way to reclaim freedom.</p>
+        </div>
+    </section>
+
+    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=2070&auto=format&fit=crop');">
+        <div class="content-box active">
+            <h1>Texas Tech & USA</h1>
+            <p>My time at Texas Tech refined my analytical rigor. I combined the speed of US tech culture with the grit of global logistics.</p>
         </div>
     </section>
 
     <script>
         function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
-        function toggleSearch() { alert("Search activated"); }
     </script>
 </body>
 </html>
