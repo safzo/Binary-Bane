@@ -2,48 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Studies | SAFZO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        <div class="search-container"><input type="text" class="search-bar" placeholder="Search strategy..."></div>
         <ul class="nav-links">
-            <li><a href="index.html">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="cases.html" style="color:var(--accent-orange)">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
-        <div class="mobile-controls"><button class="hamburger" onclick="toggleMenu()">☰</button></div>
     </nav>
-    <div class="mobile-menu" id="mobileMenu">
-        <span class="close-menu" onclick="toggleMenu()">&times;</span>
-        <a href="index.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html">Inquiry</a>
-    </div>
-
     <div class="grid">
         <div class="card" onclick="openModal('case1')">
-            <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=1000&auto=format&fit=crop" class="card-img">
-            <div class="card-body"><h3>Logistics ROI</h3><p>Technical Teardown →</p></div>
+            <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6" class="card-img">
+            <div class="card-body"><h3>Logistics Optimization</h3><p>Technical Teardown →</p></div>
         </div>
     </div>
-
     <div id="case1" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('case1')">&times;</span>
-            <h2>Technical Teardown: Logistics ROI</h2>
-            <hr style="border:0.5px solid var(--accent-orange); margin:1.5rem 0;">
-            <p><strong>Result:</strong> $40k saved monthly by optimizing delivery routing through Bayesian modeling.</p>
+            <h2>Logistics ROI</h2><hr><p>Built a routing model that saved $40k/month.</p>
         </div>
     </div>
-
     <script>
-        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
-        function openModal(id) { document.getElementById(id).style.display = "block"; }
-        function closeModal(id) { document.getElementById(id).style.display = "none"; }
-        window.onclick = function(e) { if(e.target.className === 'modal') e.target.style.display = 'none'; }
+        function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active');}
+        function openModal(id){document.getElementById(id).style.display="block";}
+        function closeModal(id){document.getElementById(id).style.display="none";}
+        window.onclick = function(e){if(e.target.className==='modal')e.target.style.display='none';}
     </script>
 </body>
 </html>
