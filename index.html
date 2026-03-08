@@ -15,22 +15,33 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
-        <div class="mobile-controls"><button class="cta-btn" onclick="toggleMenu()">☰</button></div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
     </nav>
+
     <div class="mobile-menu" id="mobileMenu">
         <a href="index.html" onclick="toggleMenu()">Home</a>
-        <a href="about.html">About</a>
-        <a href="cases.html">Case Studies</a>
-        <a href="blog.html">Blog</a>
-        <a href="inquiry.html">Inquiry</a>
+        <a href="about.html" onclick="toggleMenu()">About</a>
+        <a href="cases.html" onclick="toggleMenu()">Case Studies</a>
+        <a href="blog.html" onclick="toggleMenu()">Blog</a>
+        <a href="inquiry.html" onclick="toggleMenu()">Inquiry</a>
     </div>
-    <section class="parallax-section" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072');">
-        <div class="content-box">
-            <h1>Engineering Silence.</h1>
-            <p>I build the data architectures that turn industrial friction into measurable ROI.</p><br>
-            <a href="inquiry.html" class="cta-btn">Start Assessment</a>
-        </div>
+
+    <section class="parallax" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072');">
+        <div class="parallax-content"><h1>Engineering Silence.</h1><p>Predictive architectures for industrial scale-ups.</p></div>
     </section>
-    <script>function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active');}</script>
+
+    <section class="parallax" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070');">
+        <div class="parallax-content"><h2>Strategic Intelligence.</h2><p>Intercepting operational leaks before they manifest.</p></div>
+    </section>
+
+    <section class="parallax" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070');">
+        <div class="parallax-content"><h2>Data Mastery.</h2><p>Turning raw complexity into mathematical certainty.</p></div>
+    </section>
+
+    <section class="parallax" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015');">
+        <div class="parallax-content"><h2>Quantified ROI.</h2><p>Your efficiency is our primary metric.</p></div>
+    </section>
+
+    <script>function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }</script>
 </body>
 </html>
