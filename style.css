@@ -3,119 +3,83 @@
     --card-blue: #1f2833;
     --accent-orange: #f05d23;
     --text-beige: #f2e6da;
-    --white: #ffffff;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    background-color: var(--bg-black);
-    color: var(--text-beige);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+body { background: var(--bg-black); color: var(--text-beige); font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
 /* --- NAVIGATION --- */
 nav {
-    position: fixed;
-    width: 100%;
-    padding: 1rem 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(22, 24, 29, 0.98);
-    backdrop-filter: blur(15px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(242, 230, 218, 0.1);
+    position: fixed; top: 0; width: 100%; padding: 1rem 5%;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(22, 24, 29, 0.95); backdrop-filter: blur(10px);
+    z-index: 2000; border-bottom: 1px solid rgba(242, 230, 218, 0.1);
 }
-
-.logo { 
-    text-decoration: none !important; 
-    color: var(--text-beige) !important; 
-    font-weight: 800; 
-    font-size: 1.4rem; 
-    letter-spacing: 1px; 
-}
+.logo { text-decoration: none; color: var(--text-beige); font-weight: 800; font-size: 1.4rem; }
 .logo span { color: var(--accent-orange); }
 
-.nav-links { display: flex; list-style: none; gap: 1.8rem; }
-.nav-links a { 
-    color: var(--text-beige); 
-    text-decoration: none; 
-    font-size: 0.85rem; 
-    font-weight: 600; 
-    text-transform: uppercase; 
-}
-.nav-links a:hover { color: var(--accent-orange); }
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { color: var(--text-beige); text-decoration: none; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
 
-/* --- MOBILE MENU --- */
-.mobile-controls { display: none; }
+.hamburger { display: none; background: none; border: none; color: var(--text-beige); font-size: 1.8rem; cursor: pointer; }
+
+/* --- MOBILE NAV --- */
 .mobile-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background: var(--bg-black);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    transition: 0.4s ease-in-out;
+    position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
+    background: var(--bg-black); z-index: 3000; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; transition: 0.4s;
 }
 .mobile-menu.active { right: 0; }
-.mobile-menu a { color: var(--text-beige); font-size: 2rem; padding: 1.5rem; text-decoration: none; border-bottom: 1px solid var(--accent-orange); width: 80%; text-align: center; }
+.mobile-menu a { font-size: 2rem; color: var(--text-beige); text-decoration: none; margin: 1.5rem 0; }
 
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .mobile-controls { display: block; }
+    .hamburger { display: block; }
 }
 
-/* --- MODAL SYSTEM --- */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 3000;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
+/* --- PARALLAX --- */
+.parallax {
+    height: 100vh; background-attachment: fixed; background-position: center;
+    background-repeat: no-repeat; background-size: cover;
+    display: flex; align-items: center; justify-content: center; text-align: center;
 }
-.modal-content {
-    background-color: var(--card-blue);
-    margin: 5% auto;
-    padding: 3rem;
-    width: 85%; max-width: 800px;
-    max-height: 80vh; overflow-y: auto;
-    border-radius: 12px;
-    border-left: 6px solid var(--accent-orange);
-    position: relative;
-}
-.close-modal { position: absolute; top: 20px; right: 30px; font-size: 2.5rem; color: var(--text-beige); cursor: pointer; }
+.parallax-content { background: rgba(0,0,0,0.7); padding: 3rem; border-radius: 8px; border-left: 5px solid var(--accent-orange); max-width: 80%; }
 
-/* --- GRID & CARDS --- */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 120px 8% 50px; }
-.card { background: var(--card-blue); border-radius: 12px; overflow: hidden; cursor: pointer; transition: 0.3s; border: 1px solid rgba(242, 230, 218, 0.05); }
-.card:hover { transform: translateY(-10px); border-color: var(--accent-orange); }
-.card-img { width: 100%; height: 200px; object-fit: cover; }
-.card-body { padding: 1.5rem; }
-
-/* --- TIMELINE --- */
-.timeline-container { position: relative; max-width: 1000px; margin: 150px auto; padding: 0 20px; }
+/* --- BRANCHING TIMELINE --- */
+.timeline-section { padding: 180px 5% 100px; position: relative; } /* High padding to clear header */
+.timeline-container { position: relative; max-width: 1000px; margin: 0 auto; }
 .timeline-container::before {
     content: ''; position: absolute; left: 50%; width: 2px; height: 100%;
-    background: linear-gradient(to bottom, transparent, var(--accent-orange), var(--accent-orange), transparent);
-    box-shadow: 0 0 15px var(--accent-orange); transform: translateX(-50%);
+    background: var(--accent-orange); box-shadow: 0 0 15px var(--accent-orange); transform: translateX(-50%);
 }
-.node { width: 100%; margin-bottom: 100px; display: flex; justify-content: space-between; position: relative; cursor: pointer; }
-.node-content { width: 42%; background: var(--card-blue); padding: 2rem; border-radius: 8px; border: 1px solid rgba(240, 93, 35, 0.1); transition: 0.3s; }
-.node:hover .node-content { border-color: var(--accent-orange); box-shadow: 0 0 20px rgba(240, 93, 35, 0.2); transform: scale(1.05); }
-.node-dot { width: 18px; height: 18px; background: var(--accent-orange); border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%); top: 20px; box-shadow: 0 0 20px var(--accent-orange); z-index: 5; }
-.node:nth-child(even) { flex-direction: row-reverse; }
 
-/* --- UI UTILITIES --- */
-.parallax-section { height: 100vh; display: flex; align-items: center; justify-content: center; background-size: cover; background-attachment: fixed; }
-.content-box { background: rgba(31, 40, 51, 0.9); padding: 3rem; border-radius: 12px; border-left: 6px solid var(--accent-orange); max-width: 700px; }
-.cta-btn { background: var(--accent-orange); color: white; padding: 0.8rem 2rem; border-radius: 4px; font-weight: bold; border: none; cursor: pointer; text-decoration: none; display: inline-block; }
+.node { position: relative; width: 100%; margin-bottom: 80px; display: flex; align-items: center; }
+.node-content { 
+    width: 42%; background: var(--card-blue); padding: 2rem; border-radius: 8px; 
+    border: 1px solid rgba(240, 93, 35, 0.2); position: relative; transition: 0.4s;
+}
+
+/* The Branch Line Logic */
+.node-content::after {
+    content: ''; position: absolute; top: 50%; width: 19%; height: 2px;
+    background: var(--accent-orange); box-shadow: 0 0 10px var(--accent-orange);
+}
+
+.node:nth-child(odd) { justify-content: flex-start; }
+.node:nth-child(odd) .node-content::after { right: -19%; }
+
+.node:nth-child(even) { justify-content: flex-end; }
+.node:nth-child(even) .node-content::after { left: -19%; }
+
+@media (max-width: 768px) {
+    .timeline-container::before { left: 20px; }
+    .node { justify-content: flex-start !important; }
+    .node-content { width: 80%; margin-left: 50px; }
+    .node-content::after { left: -30px !important; width: 30px; }
+}
+
+/* --- FORMS & GRIDS --- */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; padding: 150px 8% 50px; }
+.form-card { background: var(--card-blue); padding: 2.5rem; border-radius: 12px; width: 90%; max-width: 600px; margin: 150px auto; border-left: 6px solid var(--accent-orange); }
+input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #000; color: #fff; border: 1px solid #333; }
+.cta-btn { background: var(--accent-orange); color: white; border: none; padding: 1rem 2rem; cursor: pointer; font-weight: bold; width: 100%; }
