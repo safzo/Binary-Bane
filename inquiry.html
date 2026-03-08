@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inquiry | SAFZO</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,30 +15,48 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html" style="color:var(--accent-orange)">Inquiry</a></li>
         </ul>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
     </nav>
-    <div style="padding-top:140px; display:flex; justify-content:center;">
-        <div class="content-box" style="width:100%; max-width:550px;">
-            <h2>Impact Assessment</h2><br>
-            <form id="inquiry-form">
-                <input type="text" id="company" placeholder="Company" style="width:100%; padding:1rem; margin-bottom:1rem; background:#16181d; color:white; border:1px solid #333;" required>
-                <input type="number" id="loss" placeholder="Loss ($)" style="width:100%; padding:1rem; margin-bottom:1rem; background:#16181d; color:white; border:1px solid #333;" required>
-                <textarea id="description" rows="4" placeholder="Friction..." style="width:100%; padding:1rem; margin-bottom:1rem; background:#16181d; color:white; border:1px solid #333;" required></textarea>
-                <button type="submit" class="cta-btn" id="submitBtn" style="width:100%;">Submit</button>
-            </form>
-        </div>
+
+    <div class="form-card">
+        <h2 style="margin-bottom:1.5rem;">Impact Assessment</h2>
+        <form id="inquiry-form">
+            <input type="text" id="company" placeholder="Company / Industry" required>
+            <input type="number" id="loss" placeholder="Estimated Annual Loss ($)" required>
+            <textarea id="description" rows="4" placeholder="Current Operational Friction..." required></textarea>
+            <button type="submit" class="cta-btn" id="submitBtn">Submit Assessment</button>
+        </form>
     </div>
+
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz325wlujMJ6sd30asumC_whIaiH8L6tPXLgtiWt8DwNHrjbT-5bpa5tQrE337fUb6yOA/exec';
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz325wlujMJ6sd30asumC_whIaiH8L6tPXLgtiWt8DwNHrjbT-5bpa5tQrE337fUb6yOA/exec'; // <--- URL HERE
         const form = document.getElementById('inquiry-form');
+        const btn = document.getElementById('submitBtn');
+
         form.addEventListener('submit', e => {
             e.preventDefault();
-            document.getElementById('submitBtn').disabled = true;
+            btn.innerHTML = "Submitting...";
+            btn.disabled = true;
+
             const formData = new FormData();
             formData.append('company', document.getElementById('company').value);
             formData.append('loss', document.getElementById('loss').value);
             formData.append('description', document.getElementById('description').value);
+
             fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
-            .then(() => { alert("Success! Recorded."); form.reset(); document.getElementById('submitBtn').disabled = false; });
+            .then(() => {
+                alert("Success! Assessment recorded.");
+                form.reset();
+                btn.innerHTML = "Submit Assessment";
+                btn.disabled = false;
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert("Submission error. Please check your script URL.");
+                btn.disabled = false;
+            });
         });
     </script>
 </body>
