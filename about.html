@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | SAFZO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">SAFZO<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="about.html" style="color:var(--accent-orange)">About</a></li>
+            <li><a href="cases.html">Case Studies</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="inquiry.html">Inquiry</a></li>
+        </ul>
+        <div class="mobile-controls"><button class="cta-btn" onclick="toggleMenu()">☰</button></div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html">Inquiry</a>
+    </div>
+    <div class="timeline-container">
+        <div class="node"><div class="node-content"><h3>Industrial Grit</h3><p>Supply chain management in high-friction manufacturing.</p></div><div class="node-dot"></div></div>
+        <div class="node"><div class="node-content"><h3>Texas Tech Rigor</h3><p>Mastering mathematical modeling and Data Science architecture.</p></div><div class="node-dot"></div></div>
+        <div class="node"><div class="node-content"><h3>Predictive Divergence</h3><p>Building Bayesian systems to intercept $200k+ operational leaks.</p></div><div class="node-dot"></div></div>
+        <div class="node"><div class="node-content"><h3>The Convergence</h3><p>SAFZO Strategy: Where history becomes high-impact execution.</p></div><div class="node-dot"></div></div>
+    </div>
+    <script>function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active');}</script>
+</body>
+</html>
