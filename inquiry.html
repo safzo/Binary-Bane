@@ -2,158 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inquiry | SAFZO</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .form-wrapper { 
-            padding-top: 140px; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh;
-            padding-bottom: 60px;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
-
-        .form-container { 
-            width: 100%;
-            max-width: 550px; 
-            background: var(--card-blue); 
-            padding: 3.5rem; 
-            border-radius: 15px; 
-            border-left: 6px solid var(--accent-orange); 
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); 
-            transition: transform 0.3s ease;
-        }
-
-        .form-container:hover { transform: translateY(-5px); }
-
-        @media (max-width: 768px) {
-            .form-container { padding: 2rem; }
-            .form-wrapper { padding-top: 100px; }
-        }
-
-        h2 { margin-bottom: 0.5rem; color: var(--text-beige); }
-        .subtitle { color: var(--accent-orange); font-weight: 600; margin-bottom: 2rem; display: block; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
-
-        input, textarea { 
-            width: 100%; 
-            padding: 1.1rem; 
-            background: var(--bg-black); 
-            border: 1px solid rgba(242, 230, 218, 0.1); 
-            color: white; 
-            margin-bottom: 1.2rem; 
-            border-radius: 6px; 
-            font-family: inherit;
-        }
-
-        input:focus, textarea:focus { outline: none; border-color: var(--accent-orange); }
-
-        .cta-btn {
-            width: 100%;
-            padding: 1rem;
-            background: var(--accent-orange);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .cta-btn:disabled { background: #444; cursor: not-allowed; }
-
-        .logic-quote {
-            margin-top: 2.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(242, 230, 218, 0.1);
-            font-style: italic;
-            font-size: 0.85rem;
-            color: rgba(242, 230, 218, 0.6);
-        }
-        .logic-quote span { color: var(--accent-orange); font-weight: bold; }
-    </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search strategy...">
-        </div>
         <ul class="nav-links">
-            <li><a href="index.html">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html" style="color:var(--accent-orange)">Inquiry</a></li>
         </ul>
-        <div class="mobile-controls">
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
-        </div>
     </nav>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <span class="close-menu" onclick="toggleMenu()">&times;</span>
-        <a href="index.html" onclick="toggleMenu()">About</a>
-        <a href="cases.html" onclick="toggleMenu()">Case Studies</a>
-        <a href="blog.html" onclick="toggleMenu()">Blog</a>
-        <a href="inquiry.html" onclick="toggleMenu()">Inquiry</a>
-    </div>
-
-    <div class="form-wrapper">
-        <div class="form-container">
-            <h2>Impact Assessment</h2>
-            <span class="subtitle">Quantifying the ROI of optimization.</span>
-            
+    <div style="padding-top:140px; display:flex; justify-content:center;">
+        <div class="content-box" style="width:100%; max-width:550px;">
+            <h2>Impact Assessment</h2><br>
             <form id="inquiry-form">
-                <input type="text" name="company" id="company" placeholder="Company / Industry" required>
-                <input type="number" name="loss" id="loss" placeholder="Estimated Annual Loss ($)" required>
-                <textarea name="description" id="description" rows="4" placeholder="Describe the current operational friction..." required></textarea>
-                <button type="submit" class="cta-btn" id="submitBtn">Submit for Review</button>
+                <input type="text" id="company" placeholder="Company" style="width:100%; padding:1rem; margin-bottom:1rem; background:#16181d; color:white; border:1px solid #333;" required>
+                <input type="number" id="loss" placeholder="Loss ($)" style="width:100%; padding:1rem; margin-bottom:1rem; background:#16181d; color:white; border:1px solid #333;" required>
+                <textarea id="description" rows="4" placeholder="Friction..." style="width:100%; padding:1rem; margin-bottom:1rem; background:#16181d; color:white; border:1px solid #333;" required></textarea>
+                <button type="submit" class="cta-btn" id="submitBtn" style="width:100%;">Submit</button>
             </form>
-            
-            <div class="logic-quote">
-                "Since this issue is costing you $200k, my fee to build a predictive model isn't an 'expense'—it’s an <span>investment that pays for itself in 40 days.</span>"
-            </div>
         </div>
     </div>
-
     <script>
-        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
-
-        // Paste your LATEST Web App URL here
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz325wlujMJ6sd30asumC_whIaiH8L6tPXLgtiWt8DwNHrjbT-5bpa5tQrE337fUb6yOA/exec'; 
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz325wlujMJ6sd30asumC_whIaiH8L6tPXLgtiWt8DwNHrjbT-5bpa5tQrE337fUb6yOA/exec';
         const form = document.getElementById('inquiry-form');
-        const btn = document.getElementById('submitBtn');
-
         form.addEventListener('submit', e => {
             e.preventDefault();
-            btn.innerHTML = "Sending...";
-            btn.disabled = true;
-
+            document.getElementById('submitBtn').disabled = true;
             const formData = new FormData();
             formData.append('company', document.getElementById('company').value);
             formData.append('loss', document.getElementById('loss').value);
             formData.append('description', document.getElementById('description').value);
-
-            fetch(scriptURL, { 
-                method: 'POST', 
-                body: formData,
-                mode: 'no-cors' // Allows sending to Google without CORS errors
-            })
-            .then(() => {
-                alert("Assessment recorded, I'll reach out to you soon.");
-                form.reset();
-                btn.innerHTML = "Submit for Review";
-                btn.disabled = false;
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                alert("There was an error. Check console.");
-                btn.innerHTML = "Submit for Review";
-                btn.disabled = false;
-            });
+            fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
+            .then(() => { alert("Success! Recorded."); form.reset(); document.getElementById('submitBtn').disabled = false; });
         });
     </script>
 </body>
