@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Studies | SAFZO</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,28 +11,20 @@
         <a href="index.html" class="logo">SAFZO<span>.</span></a>
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
-            <li><a href="cases.html" style="color:var(--accent-orange)">Case Studies</a></li>
+            <li><a href="cases.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
     </nav>
+
     <div class="grid">
-        <div class="card" onclick="openModal('case1')">
-            <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6" class="card-img">
-            <div class="card-body"><h3>Logistics Optimization</h3><p>Technical Teardown →</p></div>
+        <div class="card" onclick="alert('Technical Teardown coming soon.')">
+            <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6" class="card-img" alt="Logistics">
+            <div class="card-body"><h3>Logistics ROI</h3><p>View Teardown →</p></div>
         </div>
-    </div>
-    <div id="case1" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('case1')">&times;</span>
-            <h2>Logistics ROI</h2><hr><p>Built a routing model that saved $40k/month.</p>
         </div>
-    </div>
-    <script>
-        function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active');}
-        function openModal(id){document.getElementById(id).style.display="block";}
-        function closeModal(id){document.getElementById(id).style.display="none";}
-        window.onclick = function(e){if(e.target.className==='modal')e.target.style.display='none';}
-    </script>
+
+    <script>function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }</script>
 </body>
 </html>
