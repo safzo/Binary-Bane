@@ -3,46 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safwan Hasan | About</title>
+    <title>SAFZO | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        <div class="search-container"><input type="text" class="search-bar" placeholder="Search strategy..."></div>
         <ul class="nav-links">
-            <li><a href="index.html" style="color:var(--accent-orange)">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
-        <div class="mobile-controls">
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
-        </div>
+        <div class="mobile-controls"><button class="cta-btn" onclick="toggleMenu()">☰</button></div>
     </nav>
-
     <div class="mobile-menu" id="mobileMenu">
-        <span class="close-menu" onclick="toggleMenu()">&times;</span>
-        <a href="index.html" onclick="toggleMenu()">About</a>
-        <a href="cases.html" onclick="toggleMenu()">Case Studies</a>
-        <a href="blog.html" onclick="toggleMenu()">Blog</a>
-        <a href="inquiry.html" onclick="toggleMenu()">Inquiry</a>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="about.html">About</a>
+        <a href="cases.html">Case Studies</a>
+        <a href="blog.html">Blog</a>
+        <a href="inquiry.html">Inquiry</a>
     </div>
-
-    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');">
-        <div class="content-box"><h1>Who Am I?</h1><p>Strategic Data Consultant bridging heavy math and ROI.</p></div>
+    <section class="parallax-section" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072');">
+        <div class="content-box">
+            <h1>Engineering Silence.</h1>
+            <p>I build the data architectures that turn industrial friction into measurable ROI.</p><br>
+            <a href="inquiry.html" class="cta-btn">Start Assessment</a>
+        </div>
     </section>
-
-    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop');">
-        <div class="content-box"><h1>Perspective</h1><p>The "Ghost" lifestyle: high-impact delivered in silence.</p></div>
-    </section>
-
-    <section class="parallax-section" style="background-image: linear-gradient(rgba(22,24,29,0.7), rgba(22,24,29,0.7)), url('https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=2070&auto=format&fit=crop');">
-        <div class="content-box"><h1>Texas Tech Experience</h1><p>Combining USA technical rigor with global logistical grit.</p></div>
-    </section>
-
-    <script>
-        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
-    </script>
+    <script>function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active');}</script>
 </body>
 </html>
