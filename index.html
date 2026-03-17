@@ -9,20 +9,17 @@
 <body>
     <nav>
         <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        <div class="search-wrapper">
-            <input type="text" class="search-bar" id="globalSearch" placeholder="Search strategy, ROI, cases..." onkeyup="searchSite()">
-        </div>
+        <div class="search-wrapper"><input type="text" class="search-bar" placeholder="Search strategy..."></div>
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <button class="hamburger" id="hamBtn">☰</button>
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-        <span style="color:var(--accent-orange); position:absolute; top:20px; right:20px; font-size:2rem; cursor:pointer;" onclick="toggleMenu()">&times;</span>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="cases.html">Case Studies</a>
@@ -30,19 +27,21 @@
         <a href="inquiry.html">Inquiry</a>
     </div>
 
-    <section class="parallax" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072');">
-        <div class="parallax-content"><h1>Engineering Silence.</h1><p>Predictive architectures for industrial scale-ups.</p></div>
+    <section class="parallax-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072');">
+        <div class="content-card"><h1>Engineering Silence.</h1><p>Predictive architectures for industrial scale-ups.</p></div>
     </section>
-    <script>
-        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
-        function searchSite() {
-            let input = document.getElementById('globalSearch').value.toLowerCase();
-            let content = document.body.innerText.toLowerCase();
-            if (input.length > 3 && content.includes(input)) {
-                console.log("Match found for: " + input);
-                // Simple search highlight or feedback can be added here
-            }
-        }
-    </script>
+
+    <section class="static-section">
+        <div>
+            <h2 style="color:var(--accent-orange); margin-bottom:1rem;">Strategic Logic.</h2>
+            <p style="font-size:1.2rem; max-width:800px;">I don't just collect data. I engineer the systems that translate physical friction into mathematical certainty and measurable ROI.</p>
+        </div>
+    </section>
+
+    <section class="parallax-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070');">
+        <div class="content-card"><h2>Quantified ROI.</h2><p>Intercepting operational leaks before they manifest.</p></div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
