@@ -9,43 +9,33 @@
 <body>
     <nav>
         <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        <div class="search-container"><input type="text" class="search-bar" placeholder="Search strategy..."></div>
         <ul class="nav-links">
-            <li><a href="index.html">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
             <li><a href="blog.html" style="color:var(--accent-orange)">Blog</a></li>
             <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
-        <div class="mobile-controls"><button class="hamburger" onclick="toggleMenu()">☰</button></div>
+        <button class="hamburger" id="hamBtn">☰</button>
     </nav>
+
     <div class="mobile-menu" id="mobileMenu">
-        <span class="close-menu" onclick="toggleMenu()">&times;</span>
-        <a href="index.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html">Inquiry</a>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html">Inquiry</a>
     </div>
 
     <div class="grid">
-        <div class="card" onclick="openModal('blog1')">
-            <div class="card-body">
-                <small style="color:var(--accent-orange)">MARCH 2024</small>
-                <h3>Why Bayesian Beats Linear</h3>
-                <p>Full Article →</p>
-            </div>
+        <div class="card" onclick="openModal('post1')">
+            <div class="card-body"><h3>The Ghost Consulting Era</h3><p>Why modern factories need data-first thinking.</p></div>
         </div>
     </div>
 
-    <div id="blog1" class="modal">
+    <div id="post1" class="modal">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('blog1')">&times;</span>
-            <h2>Why Bayesian Beats Linear Regression</h2>
-            <p style="margin-top:2rem;">[Long scrollable text about data strategy...]</p>
+            <span class="close-btn" onclick="closeModal('post1')">&times;</span>
+            <h2>The Ghost Consulting Era</h2>
+            <p>Full article content goes here...</p>
         </div>
     </div>
 
-    <script>
-        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
-        function openModal(id) { document.getElementById(id).style.display = "block"; }
-        function closeModal(id) { document.getElementById(id).style.display = "none"; }
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
