@@ -9,33 +9,39 @@
 <body>
     <nav>
         <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        <div class="search-wrapper"><input type="text" class="search-bar" id="caseSearch" onkeyup="filterCards()" placeholder="Search cases..."></div>
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
             <li><a href="cases.html" style="color:var(--accent-orange)">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <button class="hamburger" id="hamBtn">☰</button>
     </nav>
 
-    <div class="grid" id="cardGrid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6" class="card-img">
-            <div class="card-body"><h3>Logistics ROI</h3><p>Predictive routing model for $40k/mo savings.</p></div>
-        </div>
-        </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html">Inquiry</a>
+    </div>
 
-    <script>
-        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
-        function filterCards() {
-            let input = document.getElementById('caseSearch').value.toLowerCase();
-            let cards = document.getElementsByClassName('card');
-            for (let card of cards) {
-                card.style.display = card.innerText.toLowerCase().includes(input) ? "flex" : "none";
-            }
-        }
-    </script>
+    <div class="grid">
+        <div class="card" onclick="openModal('case1')">
+            <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6" class="card-img">
+            <div class="card-body"><h3>Logistics ROI</h3><p>Predictive routing model saving $40k/mo. Click to expand.</p></div>
+        </div>
+    </div>
+
+    <div id="case1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('case1')">&times;</span>
+            <h2>Technical Teardown: Logistics ROI</h2>
+            <hr><br>
+            <ul>
+                <li><strong>Problem:</strong> Inefficient route planning causing 12% waste.</li>
+                <li><strong>Solution:</strong> Python-based optimization algorithm.</li>
+                <li><strong>Result:</strong> $40,000 monthly savings.</li>
+            </ul>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
