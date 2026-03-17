@@ -9,40 +9,30 @@
 <body>
     <nav>
         <a href="index.html" class="logo">SAFZO<span>.</span></a>
-        <div class="search-wrapper"><input type="text" class="search-bar" placeholder="Search..."></div>
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html" style="color:var(--accent-orange)">Inquiry</a></li>
         </ul>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <button class="hamburger" id="hamBtn">☰</button>
     </nav>
 
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html">Inquiry</a>
+    </div>
+
     <div class="form-card">
-        <h2>Impact Assessment</h2><br>
+        <h2>Impact Assessment</h2>
+        <p style="margin-bottom:2rem; opacity:0.7;">Submit your operational constraints for a strategic audit.</p>
         <form id="inquiry-form">
-            <input type="text" id="company" placeholder="Company" required>
-            <input type="number" id="loss" placeholder="Loss ($)" required>
-            <textarea id="description" rows="4" placeholder="Friction..." required></textarea>
+            <input type="text" id="company" placeholder="Company / Industry" required>
+            <input type="number" id="loss" placeholder="Annual Estimated Loss ($)" required>
+            <textarea id="description" rows="5" placeholder="Describe the current friction..." required></textarea>
             <button type="submit" class="cta-btn" id="submitBtn">Submit Assessment</button>
         </form>
     </div>
 
-    <script>
-        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz325wlujMJ6sd30asumC_whIaiH8L6tPXLgtiWt8DwNHrjbT-5bpa5tQrE337fUb6yOA/exec';
-        const form = document.getElementById('inquiry-form');
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            document.getElementById('submitBtn').disabled = true;
-            const formData = new FormData();
-            formData.append('company', document.getElementById('company').value);
-            formData.append('loss', document.getElementById('loss').value);
-            formData.append('description', document.getElementById('description').value);
-            fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
-            .then(() => { alert("Success! Recorded."); form.reset(); document.getElementById('submitBtn').disabled = false; });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
