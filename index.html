@@ -3,34 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inquiry | SAFZO</title>
+    <title>SAFZO | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">SAFZO<span>.</span></a>
+        <a href="./index.html" class="logo">SAFZO<span>.</span></a>
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="inquiry.html" style="color:var(--accent-orange)">Inquiry</a></li>
+            <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
         <button class="hamburger" id="hamBtn">☰</button>
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html">Inquiry</a>
+        <a href="./index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cases.html">Case Studies</a>
+        <a href="blog.html">Blog</a>
+        <a href="inquiry.html">Inquiry</a>
     </div>
 
-    <div class="form-card">
-        <h2>Impact Assessment</h2>
-        <form id="inquiry-form">
-            <input type="text" id="company" placeholder="Company / Industry" required>
-            <input type="number" id="loss" placeholder="Estimated Annual Loss ($)" required>
-            <textarea id="description" rows="5" placeholder="Operational friction..." required></textarea>
-            <button type="submit" class="cta-btn" id="submitBtn">Submit Assessment</button>
-        </form>
-    </div>
+    <section class="parallax-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072');">
+        <div class="content-card">
+            <h1>Engineering Silence.</h1>
+            <p>Predictive architectures for industrial scale-ups.</p>
+        </div>
+    </section>
+
+    <section class="static-section">
+        <div style="width: 100%;">
+            <h2 style="color:var(--accent-orange); margin-bottom: 1.5rem;">Strategic Logic.</h2>
+            <p style="font-size: 1.2rem; line-height: 1.6; max-width: 800px;">
+                I don't just collect data. I engineer the systems that translate physical friction into mathematical certainty and measurable ROI.
+            </p>
+        </div>
+    </section>
+
+    <section class="parallax-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070');">
+        <div class="content-card">
+            <h2>Quantified ROI.</h2>
+            <p>Intercepting operational leaks before they manifest.</p>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
