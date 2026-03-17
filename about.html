@@ -16,20 +16,33 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <button class="hamburger" id="hamBtn">☰</button>
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-        <span style="color:var(--accent-orange); position:absolute; top:20px; right:20px; font-size:2rem; cursor:pointer;" onclick="toggleMenu()">&times;</span>
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html">Inquiry</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cases.html">Case Studies</a>
+        <a href="blog.html">Blog</a>
+        <a href="inquiry.html">Inquiry</a>
     </div>
 
-    <section class="timeline-section">
-        <div class="timeline-container">
-            <div class="node"><div class="node-content"><h3>Industrial Origins</h3><p>Supply chain grit in high-stakes manufacturing.</p></div></div>
-            <div class="node"><div class="node-content"><h3>Texas Tech Rigor</h3><p>Mathematical modeling and advanced architecture.</p></div></div>
-            </div>
+    <section class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070');">
+        <div class="content-card"><h1>The Origin.</h1><p>From industrial grit to technical rigor.</p></div>
     </section>
-    <script>function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }</script>
+
+    <section class="static-section">
+        <div><h3>The Methodology</h3><p>Ghost consulting isn't about being invisible; it's about being surgical. I integrate directly into existing stacks to solve high-stakes leaks.</p></div>
+    </section>
+
+    <section class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070');">
+        <div class="content-card"><h2>The Logic Thread.</h2><p>Every step was designed to solve the problem you're facing now.</p></div>
+    </section>
+
+    <section class="static-section">
+        <div><h3>The Promise</h3><p>Absolute transparency in data. Absolute silence in execution.</p></div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
