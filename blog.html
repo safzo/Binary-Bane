@@ -67,30 +67,41 @@
             <p>The biggest time-sink in debugging is "Deep Nesting." When you have an <code>if</code> inside an <code>if</code> inside an <code>if</code>, you create a cognitive tax.</p>
             
             <div class="code-box">
+                <pre>
                 # The Old Way
                 if user_active:
-                if balance > 100:
-                if priority_ship:
+                    if balance > 100:
+                        if priority_ship:
                 # Execute logic
+                </pre>
             </div>
 
             <p><strong>The Refactor:</strong> Use logical operators to flatten the structure. It reduces indentation and makes the "entry requirements" clear instantly.</p>
             
             <div class="code-box">
+                <pre>
                 # The "And/Or" Shortcut
-                if user_active and balance > 100 and priority_ship:
+                    if user_active and balance > 100 and priority_ship:
                 # Execute logic
+                </pre>
             </div>
 
             <h4>2. Guard Clauses: The "Exit Early" Strategy</h4>
             <p>Instead of wrapping your entire function in a massive statement, check for the failure conditions first and exit. This leaves the rest of your function "flat" and easy to read.</p>
-            <div class="code-box">if not data: return  # Exit early</div>
+            <div class="code-box">
+                <pre>
+                    if not data: return  
+                    # Exit early
+                </pre>
+            </div>
 
             <h4>3. Dictionary Mapping vs. Elif Chains</h4>
             <p>If you find yourself writing long <code>elif</code> chains, you are wasting cycles. Use a Dictionary to map inputs to actions.</p>
             <div class="code-box">
-            actions = {"red": stop_func, "green": go_func}
-            actions.get(input_color, default_func)() 
+                <pre>
+                    actions = {"red": stop_func, "green": go_func}
+                    actions.get(input_color, default_func)() 
+                </pre>
             </div>
 
             <h4>4. Truthiness and Membership Testing</h4>
@@ -98,10 +109,14 @@
 
             <h4>5. List Comprehensions: The One-Line Powerhouse</h4>
             <p>The Pro Move: This handles the loop, the conditional, and the transformation in one highly optimized machine-level operation.</p>
-            <div class="code-box">new_list = [x * 2 for x in old_list if x > 10]</div>
+            <div class="code-box">
+                <pre>
+                new_list = [x * 2 for x in old_list if x > 10]
+                </pre>
+            </div>
 
             <div style="background: rgba(240, 93, 35, 0.1); padding: 1.5rem; margin-top: 3rem; border-radius: 4px;">
-                <strong>The Summary:</strong> Optimal solutions aren't about adding more code; they are about removing the noise. By using flattened logic, I reduced script complexity by 40%.
+                <strong>The Summary:</strong> Optimal solutions aren't about adding more code; they are about removing the noise. By using flattened logic, I reduced script complexities in my day-to-day coding by 40%.
             </div>
         </article>
     </div>
