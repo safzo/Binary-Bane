@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Scroll function
+    window.onscroll = function() {
+    scrollFunction();
+    };
+    
+    function scrollFunction() {
+        const topBtn = document.getElementById("backToTop");
+        if (topBtn) {
+            // Show button after scrolling 300px
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                topBtn.style.display = "flex";
+            } else {
+                topBtn.style.display = "none";
+            }
+        }
+    }
     // 1. MOBILE MENU LOGIC
     const hamBtn = document.getElementById('hamBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -17,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    
 });
 
 // 2. MODAL LOGIC (Expandable Lists)
@@ -36,3 +53,11 @@ window.onclick = function(event) {
         event.target.style.display = "none";
     }
 }
+
+// Smooth scroll to top when clicked
+document.getElementById("backToTop").addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
