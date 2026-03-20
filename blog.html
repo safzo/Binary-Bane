@@ -19,7 +19,7 @@
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html">Inquiry</a>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html" style="color:var(--accent-orange)">Blog</a><a href="inquiry.html">Inquiry</a>
     </div>
 
     <div class="grid">
@@ -35,6 +35,77 @@
             <p>Full article content goes here...</p>
         </div>
     </div>
+
+    <div class="grid">
+    <div class="card" onclick="openModal('pythonRefactor')">
+        <div class="card-body">
+            <div class="read-badge" style="margin-bottom: 1rem; width: fit-content;">
+                <span>📱</span> 5 MIN READ
+            </div>
+            <h3 style="font-size: 1.5rem;">The Logic Refactor: Engineering Pythonic Efficiency</h3>
+            <p style="margin-top: 10px; opacity: 0.7;">Refactoring "nested chaos" into "streamlined architecture."</p>
+        </div>
+    </div>
+</div>
+
+<div id="pythonRefactor" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('pythonRefactor')">&times;</span>
+        
+        <header class="journal-header">
+            <div class="meta-info">
+                <div class="read-badge"><span>📱</span> 5 MIN READ</div>
+                <span class="author-name">By SAFZO ARCHIVE</span>
+            </div>
+            <h1 class="journal-title">The Logic Refactor: Engineering Pythonic Efficiency</h1>
+        </header>
+
+        <article class="journal-body">
+            <p>In industrial programming, "it works" is the floor, not the ceiling. The goal is surgical execution: code that is as fast to read as it is to run. Here are the logic-shifts that transformed my workflow from "nested chaos" to "streamlined architecture."</p>
+
+            <h4>1. Collapsing the "Nested Pyramid"</h4>
+            <p>The biggest time-sink in debugging is "Deep Nesting." When you have an <code>if</code> inside an <code>if</code> inside an <code>if</code>, you create a cognitive tax.</p>
+            
+            <div class="code-box">
+                # The Old Way
+                if user_active:
+                if balance > 100:
+                if priority_ship:
+                # Execute logic
+            </div>
+
+            <p><strong>The Refactor:</strong> Use logical operators to flatten the structure. It reduces indentation and makes the "entry requirements" clear instantly.</p>
+            
+            <div class="code-box">
+                # The "And/Or" Shortcut
+                if user_active and balance > 100 and priority_ship:
+                # Execute logic
+            </div>
+
+            <h4>2. Guard Clauses: The "Exit Early" Strategy</h4>
+            <p>Instead of wrapping your entire function in a massive statement, check for the failure conditions first and exit. This leaves the rest of your function "flat" and easy to read.</p>
+            <div class="code-box">if not data: return  # Exit early</div>
+
+            <h4>3. Dictionary Mapping vs. Elif Chains</h4>
+            <p>If you find yourself writing long <code>elif</code> chains, you are wasting cycles. Use a Dictionary to map inputs to actions.</p>
+            <div class="code-box">
+            actions = {"red": stop_func, "green": go_func}
+            actions.get(input_color, default_func)() 
+            </div>
+
+            <h4>4. Truthiness and Membership Testing</h4>
+            <p>Optimization: Instead of <code>if x == 1 or x == 2:</code>, use <code>if x in {1, 2}:</code>. Cleanliness: Instead of <code>if len(list) > 0:</code>, use <code>if list:</code>.</p>
+
+            <h4>5. List Comprehensions: The One-Line Powerhouse</h4>
+            <p>The Pro Move: This handles the loop, the conditional, and the transformation in one highly optimized machine-level operation.</p>
+            <div class="code-box">new_list = [x * 2 for x in old_list if x > 10]</div>
+
+            <div style="background: rgba(240, 93, 35, 0.1); padding: 1.5rem; margin-top: 3rem; border-radius: 4px;">
+                <strong>The Summary:</strong> Optimal solutions aren't about adding more code; they are about removing the noise. By using flattened logic, I reduced script complexity by 40%.
+            </div>
+        </article>
+    </div>
+</div>
 
     <script src="script.js"></script>
 </body>
