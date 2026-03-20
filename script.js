@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Open logic
         hamBtn.addEventListener('click', () => {
             mobileMenu.classList.add('active');
-            // Background remains scrollable or you can add overflow = 'hidden' here
+            // Background remains scrollable or we can add overflow = 'hidden' here
         });
 
         // New: Dedicated Close logic for the X icon
