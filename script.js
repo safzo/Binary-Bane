@@ -2,18 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. MOBILE MENU LOGIC
     const hamBtn = document.getElementById('hamBtn');
     const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu'); // New: Target the X inside the menu
 
     if (hamBtn && mobileMenu) {
+        // Open logic
         hamBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            hamBtn.innerHTML = mobileMenu.classList.contains('active') ? '✕' : '☰';
+            mobileMenu.classList.add('active');
+            // Background remains scrollable or you can add overflow = 'hidden' here
         });
+
+        // New: Dedicated Close logic for the X icon
+        if (closeMenu) {
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        }
 
         const links = mobileMenu.querySelectorAll('a');
         links.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
-                hamBtn.innerHTML = '☰';
+                // Removed the hamBtn.innerHTML swap to keep the icon as ☰
             });
         });
     }
@@ -22,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const topBtn = document.getElementById("backToTop");
     
     if (topBtn) {
-        // Show/Hide button on scroll
         window.onscroll = function() {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                 topBtn.style.display = "flex";
@@ -31,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        // Smooth scroll to top
         topBtn.addEventListener("click", () => {
             window.scrollTo({
                 top: 0,
@@ -52,7 +59,6 @@ function closeModal(id) {
     if (modal) modal.style.display = "none";
 }
 
-// Close modal when clicking the dark background
 window.addEventListener('click', (event) => {
     if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
