@@ -1,20 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Scroll function
-    window.onscroll = function() {
-    scrollFunction();
-    };
-    
-    function scrollFunction() {
-        const topBtn = document.getElementById("backToTop");
-        if (topBtn) {
-            // Show button after scrolling 300px
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                topBtn.style.display = "flex";
-            } else {
-                topBtn.style.display = "none";
-            }
-        }
-    }
     // 1. MOBILE MENU LOGIC
     const hamBtn = document.getElementById('hamBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -33,10 +17,31 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 2. BACK TO TOP LOGIC
+    const topBtn = document.getElementById("backToTop");
     
+    if (topBtn) {
+        // Show/Hide button on scroll
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                topBtn.style.display = "flex";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+
+        // Smooth scroll to top
+        topBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
 });
 
-// 2. MODAL LOGIC (Expandable Lists)
+// 3. MODAL LOGIC (Global functions)
 function openModal(id) {
     const modal = document.getElementById(id);
     if (modal) modal.style.display = "block";
@@ -47,17 +52,9 @@ function closeModal(id) {
     if (modal) modal.style.display = "none";
 }
 
-// Close modal when clicking outside of it
-window.onclick = function(event) {
-    if (event.target.className === 'modal') {
+// Close modal when clicking the dark background
+window.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
     }
-}
-
-// Smooth scroll to top when clicked
-document.getElementById("backToTop").addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
 });
