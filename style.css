@@ -67,6 +67,28 @@ nav {
 }
 .close-btn { position: absolute; top: 15px; right: 20px; font-size: 2rem; cursor: pointer; }
 
+/* --- NEWSPAPER FORMATTING --- */
+.journal-header { border-bottom: 2px solid var(--accent-orange); margin-bottom: 2rem; padding-bottom: 1rem; }
+.journal-title { font-size: 2.5rem; line-height: 1.1; margin-bottom: 1rem; color: #fff; }
+
+.meta-info { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1rem; }
+.read-badge { 
+    background: rgba(0, 122, 255, 0.15); color: #007aff; 
+    padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; 
+    font-weight: 700; display: flex; align-items: center; gap: 6px;
+}
+.author-name { font-size: 0.9rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px; }
+
+.journal-body p { line-height: 1.7; margin-bottom: 1.5rem; font-size: 1.05rem; color: #d1d1d1; }
+.journal-body h4 { color: var(--accent-orange); margin: 2rem 0 1rem; font-size: 1.3rem; }
+
+/* Code Block Styling */
+.code-box { 
+    background: #0b0c10; padding: 1.5rem; border-radius: 6px; 
+    border-left: 3px solid #4a4a4a; font-family: 'Fira Code', monospace; 
+    font-size: 0.9rem; margin: 1rem 0; overflow-x: auto; color: #9cdcfe;
+}
+
 /* --- FORMS --- */
 .form-card { background: var(--card-blue); padding: 3rem; border-radius: 12px; width: 90%; max-width: 600px; margin: 150px auto; border-left: 6px solid var(--accent-orange); }
 input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #0b0c10; color: #fff; border: 1px solid #1f2833; border-radius: 4px; }
