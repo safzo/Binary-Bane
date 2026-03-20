@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (topBtn) {
         // Show/Hide button on scroll
         window.onscroll = function() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                 topBtn.style.display = "flex";
             } else {
                 topBtn.style.display = "none";
