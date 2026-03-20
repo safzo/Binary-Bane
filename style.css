@@ -93,7 +93,10 @@ nav {
     margin: 1rem 0; 
     overflow-x: auto; 
     color: #9cdcfe;
-    white-space: pre; 
+    
+    text-align: left;           /* Forces text to the left */
+    white-space: pre;          /* Respects line breaks */
+    display: block;             /* Ensures it takes the full width available */
 }
 
 /* --- FORMS --- */
