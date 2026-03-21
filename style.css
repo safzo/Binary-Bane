@@ -26,7 +26,18 @@ nav {
 .logo span { color: var(--accent-orange); }
 
 .nav-links { display: flex; list-style: none; gap: 2rem; }
-.nav-links a { color: var(--text-beige); text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; }
+.nav-links a { 
+    color: var(--text-beige); 
+    text-decoration: none; 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    /* Smooth transition for the color change */
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: var(--accent-orange);
+}
 
 .hamburger { display: none; background: none; border: none; color: var(--text-beige); font-size: 1.8rem; cursor: pointer; z-index: 4000; }
 
