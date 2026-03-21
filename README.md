@@ -1,2 +1,2 @@
 # Binary-Bane
-Predictive Analytics &amp; Optimization Consultant
+Prescriptive Analytics &amp; Optimization Consultant
