@@ -217,21 +217,22 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
 
 .footer-socials {
     display: flex;
-    gap: 15px;
+    gap: 25px; /* Spaced out for a cleaner look */
     margin-top: 25px;
 }
 
 .footer-socials a {
     color: var(--text-beige);
+    font-size: 1.4rem; /* Makes the icons legible and "clickable" */
     text-decoration: none;
-    font-size: 0.85rem;
-    transition: 0.3s;
-    opacity: 0.7;
+    transition: transform 0.3s ease, color 0.3s ease;
+    opacity: 0.8;
 }
 
 .footer-socials a:hover {
     color: var(--accent-orange);
     opacity: 1;
+    transform: translateY(-3px); /* Subtle "lift" effect on hover */
 }
 
 /* Columns styling */
