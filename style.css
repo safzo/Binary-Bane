@@ -280,6 +280,31 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
     margin-left: 20px;
 }
 
+.footer-legal {
+    display: flex;
+    flex-direction: column; /* This forces each line to start on a new row */
+    align-items: flex-end; /* Aligns all text to the right side of the footer */
+    gap: 8px; /* Adds space between lines */
+}
+
+.footer-log-item {
+    color: #777; /* Subtle text color */
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+/* Icons styling - makes them match the subtle theme */
+.footer-log-item i {
+    color: var(--accent-orange); /* Icons take the theme color */
+    font-size: 0.7rem;
+    width: 12px; /* Keeps icons aligned even if they have different shapes */
+    text-align: center;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .footer-card { padding: 40px 30px; }
