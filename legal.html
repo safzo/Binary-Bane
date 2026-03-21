@@ -3,114 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inquiry | SAFZO</title>
+    <title>Legal | SAFZO</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body class="bg-black">
     <nav>
         <a href="index.html" class="logo">SAFZO<span>.</span></a>
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
             <li><a href="cases.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="inquiry.html" style="color:var(--accent-orange)">Inquiry</a></li>
+            <li><a href="inquiry.html">Inquiry</a></li>
         </ul>
         <button class="hamburger" id="hamBtn">☰</button>
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
         <button class="close-mobile" id="closeMenu">✕</button>
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html" style="color:var(--accent-orange)">Inquiry</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cases.html">Case Studies</a>
+        <a href="blog.html">Blog</a>
+        <a href="inquiry.html">Inquiry</a>
     </div>
     
     <main class="legal-container">
         <div class="legal-card">
-            <h1 class="legal-title">System Documentation & Privacy</h1>
-            <p class="legal-subtitle">Effective Date: March 21, 2026</p>
-            
-            <hr class="footer-divider">
-
-            <section class="legal-section">
-                <h2><i class="fa-solid fa-shield-halved"></i> 01. Data Philosophy</h2>
-                <p>As a data professional, I value minimal entropy and maximum privacy. This site is designed to be a "Zero-Knowledge" platform. I do not track your behavior, sell your information, or use invasive advertising pixels.</p>
-            </section>
-
-            <section class="legal-section">
-                <h2><i class="fa-solid fa-server"></i> 02. Infrastructure & Hosting</h2>
-                <p>This website is architected using <strong>GitHub Pages</strong>. While I do not personally store your data, GitHub may collect standard system logs (including IP addresses and browser types) to ensure server security and performance. For more details, refer to the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">GitHub Privacy Statement</a>.</p>
-            </section>
-
-            <section class="legal-section">
-                <h2><i class="fa-solid fa-cookie-bite"></i> 03. Cookies & Tracking</h2>
-                <p>This site does not utilize first-party tracking cookies. Third-party assets (such as Font Awesome icons) are loaded via <strong>Cloudflare CDN</strong>. These providers may process technical metadata to deliver files efficiently to your region.</p>
-            </section>
-
-            <section class="legal-section">
-                <h2><i class="fa-solid fa-link"></i> 04. External Connections</h2>
-                <p>Clicking links to <strong>LinkedIn</strong>, <strong>GitHub</strong>, or <strong>Discord</strong> will redirect you to third-party environments. Once you leave <em>safzo.github.io</em>, your data is governed by the privacy protocols of those respective platforms.</p>
-            </section>
-    
-        <footer class="footer-container">
-        <div class="footer-card">
-            <div class="footer-main">
-                <div class="footer-info">
-                    <a href="index.html" class="logo">SAFZO<span>.</span></a>
-                    <p class="footer-bio">
-                        I don't just solve problems; I buy back your time.
-                    </p>
-                    <div class="footer-socials">
-                        <a href="https://discord.com/users/safzo" target="_blank" title="Join my Discord">
-                            <i class="fa-brands fa-discord"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/safhasan" target="_blank" title="LinkedIn Profile">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/safzo" target="_blank" title="GitHub Portfolio">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-    
-                <div class="footer-columns">
-                    <div class="footer-col">
-                        <h4>Legal</h4>
-                        <a href="legal.html">Privacy Policy</a>
-                        <a href="cookies.html">Cookies Policy</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Resources</h4>
-                        <a href="blog.html">Python Tips</a>
-                        <a href="cases.html">Case Studies</a>
-                        <a href="#">Documentation</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Company</h4>
-                        <a href="about.html">About Me</a>
-                        <a href="inquiry.html">Contact</a>
-                        <a href="#">Partners</a>
-                    </div>
-                </div>
+            <div class="legal-header">
+                <h1 class="legal-title">System Documentation</h1>
+                <p class="legal-subtitle">Privacy Protocol & Legal Terms | Version 1.0.26</p>
+                <p class="legal-date">Last Updated: March 21, 2026</p>
             </div>
-    
+
             <hr class="footer-divider">
-    
-            <div class="footer-bottom">
-                <p>&copy; 2026 SAFZO. All rights reserved.</p>
-                <div class="footer-legal">
-                    <div class="footer-log-item">
-                        <i class="fa-solid fa-star"></i> Texas Rooted
+
+            <div class="legal-content">
+                <section class="legal-block">
+                    <div class="block-header">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>01. Data Philosophy</h3>
                     </div>
-                    <div class="footer-log-item">
-                        <i class="fa-solid fa-flag"></i> Dhaka Sourced
+                    <p>This site is architected as a "Zero-Knowledge" platform. I value minimal entropy and maximum privacy. I do not track your behavior, sell your information, or utilize invasive advertising pixels.</p>
+                </section>
+
+                <section class="legal-block">
+                    <div class="block-header">
+                        <i class="fa-solid fa-server"></i>
+                        <h3>02. Infrastructure</h3>
                     </div>
-                    <div class="footer-log-item">
-                        <i class="fa-solid fa-calendar-days"></i> Released: March 21, 2026
+                    <p>Hosted via <strong>GitHub Pages</strong>. While I do not personally store your data, GitHub may collect standard system logs (IP addresses/browser types) for security. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">GitHub Privacy Statement</a>.</p>
+                </section>
+
+                <section class="legal-block">
+                    <div class="block-header">
+                        <i class="fa-solid fa-cookie-bite"></i>
+                        <h3>03. Cookies & Tracking</h3>
                     </div>
-                </div>
+                    <p>No first-party tracking cookies are utilized. Third-party assets (Font Awesome) are delivered via <strong>Cloudflare CDN</strong>, which may process technical metadata to optimize regional file delivery.</p>
+                </section>
+
+                <section class="legal-block">
+                    <div class="block-header">
+                        <i class="fa-solid fa-link"></i>
+                        <h3>04. External Nodes</h3>
+                    </div>
+                    <p>Links to LinkedIn, GitHub, or Discord redirect to external environments. Once you leave <em>safzo.github.io</em>, your data is governed by the protocols of those respective platforms.</p>
+                </section>
+            </div>
+
+            <div class="legal-action">
+                <a href="index.html" class="submit-btn" style="display: block; text-align: center; text-decoration: none;">Return to Home</a>
             </div>
         </div>
-    </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
