@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal | SAFZO</title>
+    <title>Inquiry | SAFZO</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-black">
-    <nav> </nav>
+<body>
+    <nav>
+        <a href="index.html" class="logo">SAFZO<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="cases.html">Case Studies</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="inquiry.html" style="color:var(--accent-orange)">Inquiry</a></li>
+        </ul>
+        <button class="hamburger" id="hamBtn">☰</button>
+    </nav>
 
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-mobile" id="closeMenu">✕</button>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="cases.html">Case Studies</a><a href="blog.html">Blog</a><a href="inquiry.html" style="color:var(--accent-orange)">Inquiry</a>
+    </div>
+    
     <main class="legal-container">
         <div class="legal-card">
             <h1 class="legal-title">System Documentation & Privacy</h1>
@@ -36,12 +50,68 @@
                 <h2><i class="fa-solid fa-link"></i> 04. External Connections</h2>
                 <p>Clicking links to <strong>LinkedIn</strong>, <strong>GitHub</strong>, or <strong>Discord</strong> will redirect you to third-party environments. Once you leave <em>safzo.github.io</em>, your data is governed by the privacy protocols of those respective platforms.</p>
             </section>
-
-            <div class="legal-footer">
-                <a href="index.html" class="back-btn">Return to Architecture</a>
+    
+        <footer class="footer-container">
+        <div class="footer-card">
+            <div class="footer-main">
+                <div class="footer-info">
+                    <a href="index.html" class="logo">SAFZO<span>.</span></a>
+                    <p class="footer-bio">
+                        I don't just solve problems; I buy back your time.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://discord.com/users/safzo" target="_blank" title="Join my Discord">
+                            <i class="fa-brands fa-discord"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/safhasan" target="_blank" title="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/safzo" target="_blank" title="GitHub Portfolio">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="legal.html">Privacy Policy</a>
+                        <a href="cookies.html">Cookies Policy</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="blog.html">Python Tips</a>
+                        <a href="cases.html">Case Studies</a>
+                        <a href="#">Documentation</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="about.html">About Me</a>
+                        <a href="inquiry.html">Contact</a>
+                        <a href="#">Partners</a>
+                    </div>
+                </div>
+            </div>
+    
+            <hr class="footer-divider">
+    
+            <div class="footer-bottom">
+                <p>&copy; 2026 SAFZO. All rights reserved.</p>
+                <div class="footer-legal">
+                    <div class="footer-log-item">
+                        <i class="fa-solid fa-star"></i> Texas Rooted
+                    </div>
+                    <div class="footer-log-item">
+                        <i class="fa-solid fa-flag"></i> Dhaka Sourced
+                    </div>
+                    <div class="footer-log-item">
+                        <i class="fa-solid fa-calendar-days"></i> Released: March 21, 2026
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
+    </footer>
 
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
