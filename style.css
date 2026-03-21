@@ -146,6 +146,7 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
 .cta-btn { background: var(--accent-orange); color: white; border: none; padding: 1rem 2rem; cursor: pointer; font-weight: bold; width: 100%; }
 
 /* --- Legal Page --- */
+
 /* Layout Containers */
 .legal-container {
     padding: 120px 8% 80px;
