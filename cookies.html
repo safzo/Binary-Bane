@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies | SAFZO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-black">
+    <nav>
+        <a href="index.html" class="logo">SAFZO<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="cases.html">Case Studies</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="inquiry.html">Inquiry</a></li>
+        </ul>
+        <button class="hamburger" id="hamBtn">☰</button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-mobile" id="closeMenu">✕</button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cases.html">Case Studies</a>
+        <a href="blog.html">Blog</a>
+        <a href="inquiry.html">Inquiry</a>
+    </div>
+    
+    <main class="legal-container">
+        <div class="legal-card">
+            <div class="legal-header">
+                <h1 class="legal-title">Cookie Manifest</h1>
+                <p class="legal-subtitle">Data Storage & Browser Persistence</p>
+                <p class="legal-date">Last Updated: March 21, 2026</p>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="legal-content">
+                <section class="legal-block">
+                    <div class="block-header">
+                        <i class="fa-solid fa-cookie"></i>
+                        <h3>01. Policy Overview</h3>
+                    </div>
+                    <p>This "Manifest" outlines how <em>safzo.github.io</em> utilizes browser storage. As a static portfolio, this site is designed to operate with near-zero persistence. I do not use marketing or advertising cookies.</p>
+                </section>
+
+                <section class="legal-block">
+                    <div class="block-header">
+                        <i class="fa-solid fa-gears"></i>
+                        <h3>02. Essential Cookies</h3>
+                    </div>
+                    <p>These are "Strictly Necessary" for the site to function. 
+                    <br><br>
+                    <strong>Source:</strong> GitHub Pages & Cloudflare (CDN).<br>
+                    <strong>Purpose:</strong> Security, bot detection, and asset delivery.</p>
+                </section>
+
+                <section class="legal-block">
+                    <div class="block-header">
+                        <i class="fa-solid fa-user-gear"></i>
+                        <h3>03. Managing Preferences</h3>
+                    </div>
+                    <p>You can choose to disable cookies through your browser settings. Note that disabling essential cookies may impact the performance of certain site assets fetched via third-party nodes.</p>
+                </section>
+            </div>
+            
+            <div class="legal-action">
+                <a href="index.html" class="submit-btn" style="display: block; text-align: center; text-decoration: none;">Acknowledge & Return</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-container">
+        <div class="footer-card">
+            <div class="footer-main">
+                <div class="footer-info">
+                    <a href="index.html" class="logo">SAFZO<span>.</span></a>
+                    <p class="footer-bio">I don't just solve problems; I buy back your time.</p>
+                    <div class="footer-socials">
+                        <a href="https://discord.com/users/safzo" target="_blank" title="Join my Discord"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://www.linkedin.com/in/safhasan" target="_blank" title="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/safzo" target="_blank" title="GitHub Portfolio"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="legal.html">Privacy Policy</a>
+                        <a href="cookies.html" style="color:var(--accent-orange)">Cookies Policy</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="blog.html">Python Tips</a>
+                        <a href="cases.html">Case Studies</a>
+                        <a href="#">Documentation</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="about.html">About Me</a>
+                        <a href="inquiry.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SAFZO. All rights reserved.</p>
+                <div class="footer-legal">
+                    <div class="footer-log-item"><i class="fa-solid fa-star"></i> Texas Rooted</div>
+                    <div class="footer-log-item"><i class="fa-solid fa-flag"></i> Dhaka Sourced</div>
+                    <div class="footer-log-item"><i class="fa-solid fa-calendar-days"></i> Released: March 21, 2026</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="Go to top">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>
