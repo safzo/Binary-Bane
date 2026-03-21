@@ -145,6 +145,69 @@ nav {
 input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #0b0c10; color: #fff; border: 1px solid #1f2833; border-radius: 4px; }
 .cta-btn { background: var(--accent-orange); color: white; border: none; padding: 1rem 2rem; cursor: pointer; font-weight: bold; width: 100%; }
 
+/* --- Legal Page --- */
+/* Layout Containers */
+.legal-container {
+    padding: 120px 8% 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.legal-card {
+    width: 100%;
+    max-width: 800px;
+    background: #111;
+    border: 1px solid #222;
+    padding: 60px;
+    border-radius: 24px;
+}
+
+/* Typography matching Inquiry */
+.legal-header { margin-bottom: 30px; }
+.legal-title { color: var(--text-beige); font-size: 2.5rem; margin-bottom: 10px; }
+.legal-subtitle { color: #666; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+.legal-date { color: #444; font-size: 0.8rem; margin-top: 5px; }
+
+/* Content Blocks */
+.legal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin: 40px 0;
+}
+
+.block-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.block-header i { color: var(--accent-orange); font-size: 1.1rem; }
+.block-header h3 { color: var(--text-beige); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+.legal-block p {
+    color: #999;
+    line-height: 1.8;
+    font-size: 1rem;
+    padding-left: 30px; /* Aligns text with the heading after the icon */
+}
+
+.legal-block a {
+    color: var(--accent-orange);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.legal-block a:hover { border-bottom: 1px solid var(--accent-orange); }
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .legal-card { padding: 30px; }
+    .legal-title { font-size: 1.8rem; }
+    .legal-block p { padding-left: 0; }
+}
 /* --- BACK TO TOP BUTTON --- */
 #backToTop {
     position: fixed;
