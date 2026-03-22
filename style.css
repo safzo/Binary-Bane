@@ -429,11 +429,11 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
 }
 
 .footer-bio {
-    margin: 20px 0;
+    margin: 20px auto;
     color: #999;
-    line-height: 1.6;
-    font-size: 0.95rem;
-    max-width: 400px;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 15px;
 }
 
 .footer-socials {
@@ -459,7 +459,12 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
 /* Columns styling */
 .footer-columns {
     display: flex;
-    gap: 80px;
+    gap: 40px; /* Smaller gap for mobile */
+    justify-content: center;
+    align-items: center; /* Centers the columns themselves */
+    width: 100%;
+    text-align: center;
+    padding: 0;
 }
 
 .footer-col h4 {
