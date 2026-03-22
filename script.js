@@ -52,9 +52,9 @@ const textElement = document.getElementById('typewriter');
 const phrases = [
     "Help Businesses buy back time",
     "Provide Data-Driven Solutions",
-    "Optimize Operations"
+    "Optimize Operations",
+    "Solve Problems" // The final goal
 ];
-const finalPhrase = "Solve Problems";
 
 let phraseIndex = 0;
 let charIndex = 0;
@@ -62,6 +62,7 @@ let isDeleting = false;
 
 function type() {
     const currentPhrase = phrases[phraseIndex];
+    const isLastPhrase = phraseIndex === phrases.length - 1;
     
     if (isDeleting) {
         textElement.textContent = currentPhrase.substring(0, charIndex - 1);
@@ -71,14 +72,17 @@ function type() {
         charIndex++;
     }
 
-    let typeSpeed = isDeleting ? 50 : 100;
+    // Snappy typing speeds
+    let typeSpeed = isDeleting ? 40 : 80;
 
     if (!isDeleting && charIndex === currentPhrase.length) {
         // End of phrase reached
-        if (phraseIndex === phrases.length - 1) {
-            // If it's the last dynamic phrase, transition to the orange final text
-            setTimeout(finishTyping, 1000);
-            return;
+        if (isLastPhrase) {
+            setTimeout(() => {
+                textElement.classList.add('highlight-orange');
+                document.querySelector('.cursor').style.display = 'none';
+            }, 500);
+            return; 
         }
         typeSpeed = 2000; // Pause at end
         isDeleting = true;
@@ -88,12 +92,6 @@ function type() {
     }
 
     setTimeout(type, typeSpeed);
-}
-
-function finishTyping() {
-    // Fade out cursor and set the final highlighted text
-    document.querySelector('.cursor').style.display = 'none';
-    textElement.innerHTML = `<span class="highlight-orange">${finalPhrase}</span>`;
 }
 
 // Start the effect
