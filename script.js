@@ -113,3 +113,41 @@ window.addEventListener('click', (event) => {
         event.target.style.display = "none";
     }
 });
+
+// 5. Pixelated Pet mouse move logic
+document.addEventListener('mousemove', function(e) {
+    const pupContainer = document.querySelector('.header-pup-container');
+    const pup = document.getElementById('pup');
+    
+    if (!pupContainer || !pup) return; // Exit if the element isn't on this page
+
+    // 1. Get the screen position of the CENTER of the pup
+    const pupRect = pupContainer.getBoundingClientRect();
+    const pupCenterX = pupRect.left + (pupRect.width / 2);
+    const pupCenterY = pupRect.top + (pupRect.height / 2);
+
+    // 2. Get the cursor's screen position
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // 3. Calculate the difference (delta)
+    const deltaX = mouseX - pupCenterX;
+    const deltaY = mouseY - pupCenterY;
+
+    // 4. Calculate the Angle (Math magic)
+    // atan2(y, x) returns the angle in radians
+    let radians = Math.atan2(deltaY, deltaX);
+    
+    // Convert radians to degrees
+    let degrees = radians * (180 / Math.PI);
+
+    // 5. Final Offset (Surgical Tweaking)
+    // This value (+90) assumes your sprite is drawn facing NORTH.
+    // If it's facing EAST, this might be 0.
+    // If it's facing WEST, this might be -90.
+    const rotationOffset = 90;
+    const finalAngle = degrees + rotationOffset;
+
+    // 6. Apply the rotation with CSS transform
+    pup.style.transform = `rotate(${finalAngle}deg)`;
+});
