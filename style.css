@@ -241,22 +241,50 @@ nav {
 }
 
 /* Text marquee */
-.quant-marquee {
-    background: #0a0a0a; /* Deep black for terminal look */
+.marquee-section {
+    width: 100%;
+    background-color: #0a0a0a; /* Dark Terminal Background */
     border-top: 1px solid #222;
     border-bottom: 1px solid #222;
-    padding: 10px 0;
     overflow: hidden;
+    padding: 12px 0;
+    cursor: default;
+}
+
+.marquee-wrapper {
+    display: flex;
+    width: fit-content;
+}
+
+.marquee-content {
+    display: flex;
     white-space: nowrap;
+    /* Adjust '30s' to make it faster or slower */
+    animation: scroll-left 30s linear infinite; 
+}
+
+/* THE HOVER PAUSE */
+.marquee-section:hover .marquee-content {
+    animation-play-state: paused;
 }
 
 .marquee-content span {
-    font-family: 'Courier New', Courier, monospace; /* Classic Quant font */
-    color: var(--accent-orange);
-    font-size: 0.9rem; /* Smaller looks more technical */
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--accent-orange); /* Or your preferred brand color */
     letter-spacing: 2px;
-    text-transform: uppercase;
-    padding-right: 50px;
+    padding-right: 60px; /* Space between the text and its duplicate */
+}
+
+/* THE SEAMLESS MATH */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Move exactly half of the duplicated content */
+        transform: translateX(-50%); 
+    }
 }
 
 /* Other sections */
