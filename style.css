@@ -548,19 +548,26 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
         margin-bottom: 20px;
     }
     .footer-bio {
-        font-size: 0.85rem;
+        white-space: normal;    /* Allows text to wrap to new lines */
+        width: 100%;            /* Takes up available width */
+        max-width: 320px;       /* Keeps the line length readable */
+        margin: 15px 0;         /* Pinned left vertically with SAFZO */
+        text-align: left;
     }
     .footer-columns {
+        display: flex;
+        flex-direction: row;    /* Keep your 3-column requirement */
+        justify-content: center; /* Centers the whole block of 3 columns */
+        gap: 20px;              /* Tighten gap to fit on small screens */
         width: 100%;
-        justify-content: space-around; /* Distributes 3 columns evenly across phone width */
-        gap: 10px; /* Tight gap for small screens */
+        margin-top: 30px;
     }
-    .footer-col h4 {
-        font-size: 0.85rem;
-    }
-    
-    .footer-col a {
-        font-size: 0.75rem;
+
+    /* 3. Keep text inside columns centered or left as preferred */
+    .footer-col {
+        flex: 1;
+        text-align: center;     /* Horizontal center alignment for column text */
+        align-items: flex-start;    /* Vertical alignment to top (from previous steps) */
     }
 }
 
