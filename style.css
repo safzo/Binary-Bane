@@ -110,7 +110,7 @@ nav {
     padding: 160px 8% 100px; /* Extra top padding to clear the fixed nav */
     min-height: 80vh;
     width: 100%;
-    gap: 50px;
+    gap: 100px; /* To increase the distance between the columns */
 }
 
 .hero-text-col { flex: 1; }
@@ -132,6 +132,7 @@ nav {
 .highlight-orange {
     color: var(--accent-orange);
     text-shadow: 0 0 15px rgba(255, 136, 0, 0.3); /* Subtle glow for the final text */
+    transition: color 0.5s ease;
 }
 
 .hero-sub {
@@ -212,6 +213,29 @@ nav {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column-reverse; /* Puts Photo on top, Text below */
+        text-align: center;
+        gap: 50px;
+        padding-top: 150px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .image-wrapper {
+        width: 280px; /* Slightly smaller for mobile */
+        height: 280px;
+    }
 }
 
 /* Old Sections */
