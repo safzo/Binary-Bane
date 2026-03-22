@@ -240,7 +240,26 @@ nav {
     }
 }
 
-/* Old Sections */
+/* Text marquee */
+.quant-marquee {
+    background: #0a0a0a; /* Deep black for terminal look */
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content span {
+    font-family: 'Courier New', Courier, monospace; /* Classic Quant font */
+    color: var(--accent-orange);
+    font-size: 0.9rem; /* Smaller looks more technical */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-right: 50px;
+}
+
+/* Other sections */
 .parallax-bg {
     height: 100vh; background-attachment: fixed; background-position: center;
     background-size: cover; display: flex; align-items: center; justify-content: center;
