@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    // Header Logo and meta data
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAFZO | Home</title>
@@ -9,6 +10,7 @@
 </head>
 <body>
     <nav>
+        // Header Navigation
         <a href="./index.html" class="logo">SAFZO<span>.</span></a>
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
@@ -19,6 +21,7 @@
         <button class="hamburger" id="hamBtn">☰</button>
     </nav>
 
+    // Mobile Menu
     <div class="mobile-menu" id="mobileMenu">
         <button class="close-mobile" id="closeMenu">✕</button>
         <a href="./index.html" style="color:var(--accent-orange)">Home</a>
@@ -28,13 +31,36 @@
         <a href="inquiry.html">Inquiry</a>
     </div>
 
-    <section class="parallax-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072');">
-        <div class="content-card">
-            <h1>Engineering Silence.</h1>
-            <p>Predictive architectures for industrial scale-ups.</p>
+    // First section
+    <section class="hero-parallax-section">
+        <div class="hero-container">
+            <div class="hero-text-col">
+                <p class="hero-intro">Hi, I am Safwan Hasan, and I</p>
+
+                // Typing Text - effects in JS
+                <h1 class="hero-title">
+                    <span id="typewriter"></span><span class="cursor">|</span>
+                </h1>
+                
+                <p class="hero-sub">based in Dhaka, Bangladesh.</p>
+
+                // Buttons
+                <div class="hero-actions">
+                    <a href="cases.html" class="btn btn-works">View my Works</a>
+                    <a href="inquiry.html" class="btn btn-contact">Contact me <i class="fa-solid fa-arrow-down-long"></i></a>
+                </div>
+            </div>
+
+            // Second Column
+            <div class="hero-image-col">
+                <div class="image-wrapper">
+                    <img src="headshot.jpg" alt="Safwan Hasan" class="hero-headshot">
+                </div>
+            </div>
         </div>
     </section>
 
+    // Second section
     <section class="static-section">
         <div style="width: 100%;">
             <h2 style="color:var(--accent-orange); margin-bottom: 1.5rem;">Strategic Logic.</h2>
