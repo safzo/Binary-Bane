@@ -404,6 +404,7 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
     }
 }
 
+/* Footer Starts */
 .footer-container {
     padding: 60px 8% 40px;
     background: var(--bg-black);
@@ -419,13 +420,17 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
 .footer-main {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 5%; /* Ensure there is enough padding so it doesn't touch the absolute edge */
+    box-sizing: border-box;
 }
 
+/* This is the container for SAFZO, bio, and social icons */
 .footer-info {
-    flex: 1;
-    min-width: 300px;
+    text-align: left;
+    /* Keeps the bio from stretching too far and pushing the columns */
+    max-width: 40%; 
 }
 
 .footer-bio {
@@ -456,7 +461,7 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
     transform: translateY(-3px); /* Subtle "lift" effect on hover */
 }
 
-/* Columns styling */
+/* This is the container for Legal, Resources, and Profile */
 .footer-columns {
     display: flex;
     gap: 60px; /* Adjust this to control spacing between Legal/Resources/Profile */
