@@ -9,6 +9,7 @@
 </head>
 <body>
     <nav>
+        <!-- Header -->
         <a href="./index.html" class="logo">SAFZO<span>.</span></a>
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
@@ -19,7 +20,7 @@
         <button class="hamburger" id="hamBtn">☰</button>
     </nav>
 
-
+    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <button class="close-mobile" id="closeMenu">✕</button>
         <a href="./index.html" style="color:var(--accent-orange)">Home</a>
@@ -29,7 +30,7 @@
         <a href="inquiry.html">Inquiry</a>
     </div>
 
-
+    <!-- First Section -->
     <section class="hero-parallax-section">
         <div class="hero-container">
             <div class="hero-text-col">
@@ -58,32 +59,37 @@
         </div>
     </section>
 
-
+    <!-- Second section -->
+    <!-- Text Marquee -->
     <section class="static-section">
-        <div style="width: 100%;">
-            <section class="marquee-ribbon">
-                <div class="marquee-track">
-                    <div class="marquee-content">
-                        <span>SYSTEM_STATUS: OPTIMIZING // DEBT_REDUCTION_DELTA: -15% // OEE_EFFICIENCY: MONITORING // UPTIME: 16H_DAILY // LOGISTICS_PIPELINE: INITIALIZING // </span>
-                        <span>SYSTEM_STATUS: OPTIMIZING // DEBT_REDUCTION_DELTA: -15% // OEE_EFFICIENCY: MONITORING // UPTIME: 16H_DAILY // LOGISTICS_PIPELINE: INITIALIZING // </span>
-                        <span>SYSTEM_STATUS: OPTIMIZING // DEBT_REDUCTION_DELTA: -15% // OEE_EFFICIENCY: MONITORING // UPTIME: 16H_DAILY // LOGISTICS_PIPELINE: INITIALIZING // </span>
-                    </div>
+        <section class="marquee-ribbon">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span>SYSTEM_STATUS: OPTIMIZING // DEBT_REDUCTION_DELTA: -15% // OEE_EFFICIENCY: MONITORING // UPTIME: 16H_DAILY // LOGISTICS_PIPELINE: INITIALIZING // </span>
+                    <span>SYSTEM_STATUS: OPTIMIZING // DEBT_REDUCTION_DELTA: -15% // OEE_EFFICIENCY: MONITORING // UPTIME: 16H_DAILY // LOGISTICS_PIPELINE: INITIALIZING // </span>
+                    <span>SYSTEM_STATUS: OPTIMIZING // DEBT_REDUCTION_DELTA: -15% // OEE_EFFICIENCY: MONITORING // UPTIME: 16H_DAILY // LOGISTICS_PIPELINE: INITIALIZING // </span>
                 </div>
-            </section>
-            <h2 style="color:var(--accent-orange); margin-bottom: 1.5rem;">Strategic Logic.</h2>
-            <p style="font-size: 1.2rem; line-height: 1.6; max-width: 800px;">
+            </div>
+        </section>
+    
+        <div class="static-content-container">
+            <h2 class="strategic-title">Strategic Logic.</h2>
+            <p class="strategic-text">
                 I don't just collect data. I engineer the systems that translate physical friction into mathematical certainty and measurable ROI.
             </p>
         </div>
     </section>
 
+    <!-- Third Section -->
     <section class="parallax-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070');">
         <div class="content-card">
             <h2>Quantified ROI.</h2>
             <p>Intercepting operational leaks before they manifest.</p>
         </div>
     </section>
-        <footer class="footer-container">
+
+    <!-- Footer -->
+    <footer class="footer-container">
         <div class="footer-card">
             <div class="footer-main">
                 <div class="footer-info">
@@ -103,7 +109,6 @@
                         </a>
                     </div>
                 </div>
-    
                 <div class="footer-columns">
                     <div class="footer-col">
                         <h4>Legal</h4>
