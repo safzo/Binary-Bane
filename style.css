@@ -434,11 +434,12 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
 }
 
 .footer-bio {
-    margin: 20px auto;
+    margin: 20px 0;         /* The 0 keeps it pinned left */
     color: #999;
-    text-align: left;
-    max-width: 85%;
-    padding: 0 15px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    white-space: nowrap;    /* no text wrap */
+    width: auto;            /* Allows it to take its natural width */
 }
 
 .footer-socials {
@@ -537,15 +538,29 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
     .footer-card { padding: 40px 30px; }
     .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
     .footer-main {
-        flex-direction: column;
+        flex-direction: column; /* Stack Bio on top of Columns */
         align-items: center;
         text-align: center;
         gap: 40px;
     }
+    .footer-info {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-bio {
+        font-size: 0.85rem;
+    }
     .footer-columns {
-        justify-content: center;
         width: 100%;
-        gap: 20px; /* Tighter gap for mobile 3-column look */
+        justify-content: space-around; /* Distributes 3 columns evenly across phone width */
+        gap: 10px; /* Tight gap for small screens */
+    }
+    .footer-col h4 {
+        font-size: 0.85rem;
+    }
+    
+    .footer-col a {
+        font-size: 0.75rem;
     }
 }
 
