@@ -459,11 +459,8 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
 /* Columns styling */
 .footer-columns {
     display: flex;
-    gap: 40px; /* Smaller gap for mobile */
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    padding: 0;
+    gap: 60px; /* Adjust this to control spacing between Legal/Resources/Profile */
+    text-align: left;
 }
 
 .footer-col h4 {
@@ -533,7 +530,17 @@ input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: #
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .footer-card { padding: 40px 30px; }
-    .footer-columns { gap: 40px; }
     .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+    .footer-columns {
+        justify-content: center;
+        width: 100%;
+        gap: 20px; /* Tighter gap for mobile 3-column look */
+    }
 }
 
