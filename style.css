@@ -16,41 +16,56 @@ body {
 }
 
 /* --- PIXEL PAL --- */
-
-.nav-brand {
+.pixel-pup-container {
     display: flex;
     align-items: center;
-    gap: 12px; /* Space between pup and SAFZO */
+    gap: 12px;
+    padding: 10px;
 }
 
-.pixel-pal-wrapper {
-    width: 32px;  /* Size of one single dog frame */
+.pixel-pup-canvas {
+    width: 32px;
     height: 32px;
     overflow: hidden;
-    image-rendering: pixelated; /* Keeps it crisp */
     position: relative;
+    /* Scales the 32px pup up slightly if you want it bigger */
+    transform: scale(1.5); 
 }
 
-.pup-sprite {
-    width: 160px; /* Total width: 5 frames * 32px */
+#pixel-pup {
+    width: 128px; /* Total width of your 4-dog sheet */
     height: 32px;
-    background: url('assets/images/pups/spritesheet_white.png') no-repeat;
-    background-size: 160px 192px; /* Total sheet size */
+    background: url('pixel-pup.png') no-repeat;
     
-    /* This creates the 'Tamagotchi' animation */
-    animation: dogWalk 0.8s steps(5) infinite;
+    /* THE SURGICAL SECRET: Keeps pixels sharp */
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+
+    /* Animation: 4 dogs in 1.2 seconds */
+    animation: pixel-pup-idle 1.2s steps(4) infinite;
 }
 
-/* Move the background to show each frame */
-@keyframes dogWalk {
+.pixel-pup-logo {
+    font-weight: 900;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* The Infinite Loop Math */
+@keyframes pixel-pup-idle {
     from { background-position: 0 0; }
-    to { background-position: -160px 0; }
+    to { background-position: -128px 0; }
 }
 
-/* The 'Interaction' - Pup jumps when you hover over the logo */
-.nav-brand:hover .pixel-pal-wrapper {
-    transform: translateY(-5px);
-    transition: transform 0.2s ease;
+/* Interaction: Pup jumps when you hover the container */
+.pixel-pup-container:hover .pixel-pup-canvas {
+    animation: pixel-pup-jump 0.5s ease-in-out infinite;
+}
+
+@keyframes pixel-pup-jump {
+    0%, 100% { transform: scale(1.5) translateY(0); }
+    50% { transform: scale(1.5) translateY(-5px); }
 }
 
 /* --- NAVIGATION --- */
