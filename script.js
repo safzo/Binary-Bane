@@ -113,3 +113,18 @@ window.addEventListener('click', (event) => {
         event.target.style.display = "none";
     }
 });
+
+// 5. Pixel Pal Cursor Effect
+document.addEventListener('mousemove', (e) => {
+    const pal = document.querySelector('.pixel-pal-wrapper');
+    if (!pal) return;
+
+    const rect = pal.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    const angle = Math.atan2(e.clientY - centerY, e.clientX - centerX);
+    const degree = angle * (180 / Math.PI) + 90; // Adjust offset based on sprite direction
+
+    pal.style.transform = `rotate(${degree}deg)`;
+});
