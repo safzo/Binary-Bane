@@ -15,7 +15,43 @@ body {
     overflow-y: visible; /* Standard scrolling */
 }
 
+/* --- PIXEL PAL --- */
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between pup and SAFZO */
+}
+
+.pixel-pal-wrapper {
+    width: 32px;  /* Size of one single dog frame */
+    height: 32px;
+    overflow: hidden;
+    image-rendering: pixelated; /* Keeps it crisp */
+    position: relative;
+}
+
+.pup-sprite {
+    width: 160px; /* Total width: 5 frames * 32px */
+    height: 32px;
+    background: url('assets/images/pups/spritesheet_white.png') no-repeat;
+    background-size: 160px 192px; /* Total sheet size */
+    
+    /* This creates the 'Tamagotchi' animation */
+    animation: dogWalk 0.8s steps(5) infinite;
+}
+
+/* Move the background to show each frame */
+@keyframes dogWalk {
+    from { background-position: 0 0; }
+    to { background-position: -160px 0; }
+}
+
+/* The 'Interaction' - Pup jumps when you hover over the logo */
+.nav-brand:hover .pixel-pal-wrapper {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease;
+}
 
 /* --- NAVIGATION --- */
 nav {
