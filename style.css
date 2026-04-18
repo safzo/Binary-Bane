@@ -92,6 +92,10 @@ body {
     transform: perspective(1000px) rotateX(0deg) translateY(0);
 }
 
+/* Targeting the paragraph directly if it has the class */
+p.tilt-in-element {
+    transition-delay: 0.2s; /* Delays the subheading (<p> tag) to tilt slightly after the main heading transition
+}
 
 
 /* --- NAVIGATION --- */
