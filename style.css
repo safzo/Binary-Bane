@@ -94,7 +94,7 @@ body {
 
 /* Targeting the paragraph directly if it has the class */
 p.tilt-in-element {
-    transition-delay: 0.2s; /* Delays the subheading (<p> tag) to tilt slightly after the main heading transition
+    transition-delay: 0.2s; /* Delays the subheading (<p> tag) to tilt slightly after the main heading transition */
 }
 
 
