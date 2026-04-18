@@ -75,6 +75,24 @@ body {
 }
 
 
+/* --- Heading transitions --- */
+
+/* The initial hidden state */
+.tilt-in-element {
+    opacity: 0;
+    /* This creates the 'tilted' look. Adjust 20deg to your liking */
+    transform: perspective(1000px) rotateX(-20deg) translateY(30px);
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease-out;
+    will-change: transform, opacity;
+}
+
+/* The active 'triggered' state */
+.tilt-in-element.is-visible {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) translateY(0);
+}
+
+
 
 /* --- NAVIGATION --- */
 nav {
