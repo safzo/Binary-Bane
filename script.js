@@ -113,3 +113,27 @@ window.addEventListener('click', (event) => {
         event.target.style.display = "none";
     }
 });
+
+// 5. Tilt-In Transitions for Heading and Subheadings
+document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+        root: null, // use the viewport
+        threshold: 0.2 // trigger when 20% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add the class to trigger the CSS transition
+                entry.target.classList.add('is-visible');
+                
+                // Stop observing after it happens once
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Tell the observer to watch every element with our class
+    const tiltElements = document.querySelectorAll('.tilt-in-element');
+    tiltElements.forEach(el => observer.observe(el));
+});
