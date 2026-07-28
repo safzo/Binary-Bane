@@ -22,10 +22,10 @@ Rather than offering generic data dashboards, **Binary-Bane** focuses on **Presc
 
 ## Key Features & Portal Capabilities
 
-*Financial Leakage Diagnostic Engine:* A direct client engagement portal where business owners and operational managers can submit specific operational friction points (e.g., inventory variance, chemical over-consumption, ERP discrepancies) to receive a quantified dollar-value impact assessment.
-*Case Studies & Substack Technical Journal:* In-depth articles and real-world case studies analyzing supply chain bottlenecks, T-SQL audit pipelines, and Python/XGBoost operational models (syndicated with Substack).
-*Zero-Framework Performance:* Engineered without heavy frontend frameworks to ensure instant loading speeds, maximum accessibility, and clean, semantic code structure.
-*Fully Responsive UI/UX:* Styled with modern CSS grid/flexbox layouts and interactive JavaScript components designed for seamless viewing across mobile, tablet, and desktop devices.
+* Financial Leakage Diagnostic Engine: A direct client engagement portal where business owners and operational managers can submit specific operational friction points (e.g., inventory variance, chemical over-consumption, ERP discrepancies) to receive a quantified dollar-value impact assessment.
+* Case Studies & Substack Technical Journal: In-depth articles and real-world case studies analyzing supply chain bottlenecks, T-SQL audit pipelines, and Python/XGBoost operational models (syndicated with Substack).
+* Zero-Framework Performance: Engineered without heavy frontend frameworks to ensure instant loading speeds, maximum accessibility, and clean, semantic code structure.
+* Fully Responsive UI/UX: Styled with modern CSS grid/flexbox layouts and interactive JavaScript components designed for seamless viewing across mobile, tablet, and desktop devices.
 
 ---
 
