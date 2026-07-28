@@ -5,27 +5,32 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
 
-**Prescriptive Analytics, Operations Optimization & Financial Leakage Diagnostics**
+**Personal Portfolio, Technical Journal & Prescriptive Analytics Portal**
+
+🌐 **Live Website:** [https://safzo.github.io/Binary-Bane/](https://safzo.github.io/Binary-Bane/)
 
 </div>
 
 ---
 
-## About Binary-Bane
+## 🌐 About Binary-Bane
 
-**Binary-Bane** is the digital hub for my freelance analytics practice, technical blog, and operational consulting. Built from scratch using lightweight, high-performance **HTML5, CSS3, and Vanilla JavaScript**, this platform bridges the gap between raw industrial data and measurable financial ROI.
+**Binary-Bane** is the source code for my personal website and digital presence, hosted directly via **GitHub Pages**. Built with semantic **HTML5, custom CSS3, and modern Vanilla JavaScript**, this platform showcases my professional background, open projects, technical writings, and prescriptive analytics consulting services.
 
-Rather than offering generic data dashboards, **Binary-Bane** focuses on **Prescriptive Analytics**—identifying specific operational bottlenecks, quantifying the exact dollar value of hidden financial leakages, and engineering mathematical models to plug them.
+It serves as a central hub connecting raw industrial data engineering, operational optimization, and measurable financial ROI.
 
 ---
 
-## Key Features & Portal Capabilities
+## 🎯 Key Pages & Capabilities
 
-* Financial Leakage Diagnostic Engine: A direct client engagement portal where business owners and operational managers can submit specific operational friction points (e.g., inventory variance, chemical over-consumption, ERP discrepancies) to receive a quantified dollar-value impact assessment.
-* Case Studies & Substack Technical Journal: In-depth articles and real-world case studies analyzing supply chain bottlenecks, T-SQL audit pipelines, and Python/XGBoost operational models (syndicated with Substack).
-* Zero-Framework Performance: Engineered without heavy frontend frameworks to ensure instant loading speeds, maximum accessibility, and clean, semantic code structure.
-* Fully Responsive UI/UX: Styled with modern CSS grid/flexbox layouts and interactive JavaScript components designed for seamless viewing across mobile, tablet, and desktop devices.
+* 🏠 **Home (`index.html`):** The primary landing page introducing my digital presence, core domain focus, and engineering philosophy.
+* 👨‍💻 **About (`about.html`):** Overview of my academic credentials (M.S. in Data Science, B.S. in Computer Science), technical background, and experience.
+* 📊 **Case Studies (`cases.html`):** Deep dives into open analytics projects, supply chain optimizations, and real-world data pipelines.
+* 📝 **Blog & Articles (`blog.html`):** Technical write-ups, lessons learned, and syndicated articles from Substack covering Python, SQL, and data analytics.
+* 💵 **Financial Leakage Inquiry (`inquiry.html`):** An interactive engagement portal where business owners can submit operational friction points to evaluate and quantify dollar-value financial leakage.
+* 🛡️ **Governance (`legal.html`, `cookies.html`, `404.html`):** Dedicated pages for privacy, legal disclosures, cookie management, and custom error handling.
 
 ---
 
@@ -33,13 +38,16 @@ Rather than offering generic data dashboards, **Binary-Bane** focuses on **Presc
 
 ```text
 Binary-Bane/
-├── index.html              # Main Landing Page & Executive Summary
-├── articles/               # Deep-dive Case Studies & Substack Articles
-├── css/
-│   ├── styles.css          # Main Design Token System & Layouts
-│   └── responsive.css      # Mobile & Tablet Breakpoint Overrides
-├── js/
-│   ├── main.js             # UI Interactivity & Dynamic Content
-│   └── diagnostic-form.js  # Financial Leakage Intake Logic
-├── assets/                 # SVGs, Diagrams, and Case Study Visuals
-└── README.md
+├── index.html        # Main Landing Page & Digital Hub
+├── about.html        # Background, Education & Experience
+├── blog.html         # Technical Articles & Substack Journal
+├── cases.html        # Case Studies & Open Analytics Projects
+├── inquiry.html      # Financial Leakage Diagnostic & Inquiry Form
+├── legal.html        # Legal Disclaimers & Terms
+├── cookies.html      # Cookie Policy Notice
+├── 404.html          # Custom Page Not Found Handler
+├── style.css         # Core CSS Stylesheet & Animations
+├── script.js         # Custom UI Interactivity & Motion Effects
+├── Binary Bane.jpg   # Profile Avatar
+├── pixel-pup.png     # Graphic Asset
+└── README.md         # Repository Documentation
